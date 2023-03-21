@@ -5,11 +5,11 @@
 @font-face { font-family: "Saol Display"; src: url(SaolDisplay-Regular.ttf) format("truetype"); }
 @font-face { font-family: "Saol Display Italic"; src: url(SaolDisplay-Semibolditalic.ttf) format("truetype"); }
 
-$primary: #00BBF2;
-$secondary:#5E82AC;
+$primary: #4C89BE;
+$secondary:#82A8D1;
 $tertiary: #373635;
-$font: 'Lato', sans-serif;
-$font2: 'Lato', sans-serif;
+$font: 'Source Sans Pro', sans-serif;
+$font2: 'Playfair Display SC', serif;
 $text: #000000;
 
 #fixed-tabs{position:fixed;bottom:0;right:0;width:100%;text-align:center;line-height:1;display:flex;z-index:9999}
@@ -51,14 +51,46 @@ main ul{list-style:none;padding:0;margin:10px auto;text-align:left;display:table
 .btn-alt {background-color: $text; color: white}
 .btn-alt:hover {background-color: $primary; color: white;}
 
-header{position:relative;padding:5px 10px;background: #fff;
-    .flex-ed{justify-content:space-between;align-items:center;flex-wrap:nowrap;max-width: 1400px;margin:auto;width:100%;padding: 10px 30px;}
-    .btn{margin:0; min-width: 200px; font-size: 16px; letter-spacing: normal; padding:10px 15px; font-weight: bold;
-        span{font-size: 29px; letter-spacing: 0.05em; line-height: .9;}
-        &:before {display: none;}
-        &:hover {background-color: $primary;}
+header{position:relative;padding:0;z-index:100;background-color: #E6EEF6;
+    .locations{flex:0 1 510px;
+        > span{border-radius:25px;padding:3px 20px;text-align:center;font:500 20px/1.1 $font;letter-spacing:1.5px;text-transform:uppercase;background-color:$primary;color:#fff;display:table;margin:auto auto 10px}
+        .flex-ed{justify-content:space-around}
     }
-    .hd-info {display: flex; text-align: center;flex: 1;justify-content: space-evenly;}
+    address{padding:0 8px;}
+    .address{display:flex;color: #000;font-size: 22px;line-height:1.25;font-weight:400;letter-spacing:.55px;margin-bottom: 10px;
+        &:hover{color:$secondary}
+        i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
+    }
+}
+.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0;animation-duration:.8s;animation-fill-mode:both;animation-name:slideIn;z-index:999;box-shadow:0 3px 7px rgba(0,0,0,0.35);
+    .logo {margin-bottom: 0;
+        img{max-height:80px}
+    }
+}
+.pho{display:flex;color:#000;font:700 37px/30px $font;
+    span{display:block;color:#FFF;font-size:14px;font-weight:500;text-transform:uppercase;font-family:$font}
+    &:hover{color:$text;}
+    i {display: flex;align-items: center;
+        &:before {color: $primary;font-size: 22px;margin-left: 0px;margin-right: 15px;}
+    }
+}
+#nav{display:flex;max-width:1350px;justify-content:space-between;margin:auto;align-items:center;padding:30px 10px;
+    .btn{margin:0;font-size:21px;min-width:200px;text-transform:none;display:flex;color: #fff;font-weight: 600;border-radius: 20px;
+        span{display:block;font-family:$font;font-weight:500;letter-spacing:1.5px}
+        i:before {margin-right: 10px;}
+    }
+    #mobile-btns {
+        width: 100%; display: flex;flex-wrap: wrap;align-items: center;
+        > * {flex: 1;height: 77px;}
+        .btn {
+            display: flex;flex-wrap: wrap; justify-content: center; border-radius: 0;text-transform:uppercase;
+            span {width: 100%;}
+        }
+        .phone, .btn {
+            display: flex; flex-wrap: wrap; justify-content: center;align-content: center;
+            span {width: 100%;}
+        }
+    }
 }
 
 .phone{color:$primary; font-size:35px;line-height:1.1;font-family:$font;font-weight:700;
@@ -70,45 +102,84 @@ header{position:relative;padding:5px 10px;background: #fff;
     &:hover{color:$primary}
 }
 
-.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0;animation:slideIn .8s both;box-shadow:1.6px 2.5px 7px rgba(6,7,7,0.35); z-index: 2000;
-    .logo img{max-height:70px}
-}
-
 .split{display:flex;justify-content:space-around;align-items:center;max-width:1260px;margin:50px auto;
     article{margin:10px;padding:10px;flex:0 1 530px;text-align:left;
         p, h2 {text-align:left}
-        h2 {color: #324248; margin-bottom: 30px;font-style: italic;}
+        h2 {color: #324248; margin-bottom: 30px;font-size: 45px;}
+        ul {
+            margin-left: 0;
+            li {
+                margin: 20px auto;font-size: 30px;padding-left: 45px;
+            &:before {font-size: 24px;color: #96A7BB;top: 3px;}
+            }
+        }
     }
     .btn{margin:15px 0;min-width: 300px;color: #fff;}
     figure{flex:0 1 50%;position:relative; }
     &.even figure{order:-1}
 }
 
-figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%); font-weight: bold; color: #fff; background: #000; text-transform: uppercase; padding: 5px 50px;}
+figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spacing: 1px; background: rgba(255,255,255,0.9); text-transform: uppercase; padding: 5px 50px;}
 
 .covid{background-color: #f2c845;text-align:center;padding:10px;color:#231f20;font-weight:700;font-size:22px;display:block;margin:auto;line-height:1.1}
 
-#banner{
-    border-bottom: 15px solid $secondary;max-height:600px;position:relative;margin:0 auto;padding:0;background:url(assets/images/lp-cosmetic-banner-2023.jpg) center no-repeat;background-size:cover;justify-content:space-around;
-    .flex-ed{overflow:hidden; justify-content: center;
-        > * {flex-basis: 50%;}
+#banner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  > * {
+    flex: 1 0 500px;
+  }
+  figure {
+    margin: 0;
+    position: relative;
+    order: 1;
+    text-align: center;
+    img {
+      width: 100%;
+      position: relative;
+      width: 100%;
     }
-    figure{flex:0 1 50%;position:relative;
-        img{display:none}
-        .caption a{color:#fff;font:400 19px/1 "Barlow Condensed",sans-serif;padding:0 5px;
-            &:hover{color:$secondary}
-        }
+  }
+  h1 {
+    font-size: 60px;
+    color: #fff;
+    letter-spacing: normal;
+    line-height: 60px;
+    text-align: center;
+    strong {
+      display: block;
+      font-size: 104px;
+      line-height: 1;
+      font-family: $font2;
     }
-    article{padding: 50px 10px; margin-left:20px;z-index:1;flex:0 1 610px; margin-right: 50px;
-        > div{font:400 25px/41px $font;color: #102430;letter-spacing:2.3px;text-align:center;margin:40px auto 0;padding:5px 0;
-            span{display:block;letter-spacing:3.6px;font:400 55px/.9 "Barlow Condensed",sans-serif;margin:0 auto 5px;display:block;letter-spacing:5.5px}
-        }
-        h1{margin-bottom:30px;line-height:1;font-size:77px;color: $secondary; font-family: $font2;font-style: italic;font-weight: 200; margin: auto;
-            span {display: block; font-weight: 700; font-size: 77px; font-family: $font2;}
-        }
-        p {color: $text;font-size:30px;font-weight:500;line-height:40px; max-width: 480px; margin: 40px auto;}
+  }
+  article {
+    order: 2;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    display: flex;
+    margin:auto;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    p {font-size: 25px;line-height: 30px;}
+    * {
+      color: #000;
     }
-    ul li {color: white;}
+  }
+  #stamps {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    img {
+      margin: 0;
+    }
+  }
 }
 
 #callouts {
@@ -134,36 +205,39 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
     }
 }
 
-#services-custom{background: rgb(52,75,96); background: linear-gradient(180deg, rgba(52,75,96,1) 0%, rgba(27,40,52,1) 100%); padding:2em}
+#services-custom{background-color: #96A7BB; padding:4em 2em;}
 
-.services{background-color:#fff;border: 10px solid $secondary;text-align:center;max-width:1260px;margin:0 auto;
-    > div:first-of-type {display: flex;justify-content: space-around;flex-wrap: wrap;padding: 40px;}
+.services{background-color:#fff;border: 6px solid #1D2122;text-align:center;max-width:1260px;margin:0 auto;
+    > div:first-of-type {
+        display: flex;justify-content: space-around;flex-wrap: wrap;padding: 40px;
+        article {max-width: 550px;}
+    }
     h1 {
         font-size:24px;font-weight:500;line-height:1;color:#0F0D0D;font-family:"Barlow",sans-serif;text-shadow:none;margin:0 0 20px;text-align:center;
         span {font-size:24px;color:#1a1818;font-family:"Barlow",sans-serif;display:block;}
         sup {font-size:26px;font-weight:500;line-height:46px;}
         b {color:#bababa;font-family:"Manrope",sans-serif;font-size:45px;}
     }
-    h2{font-size:45px;font-weight:300;font-style:italic;line-height:1;color:$text;font-family:$font;text-shadow:none;margin:0 0 20px;text-align:center;
-        span{font-weight: 400;font-size:24px;color:#1a1818;font-family:$font;display:block;font-style: normal;}
+    h2{font-size:45px;font-weight:300;line-height:1;color:$text;font-family:$font2;text-shadow:none;margin:0 0 20px;text-align:center;
+        span{font-weight: 400;text-transform:uppercase;letter-spacing: 2px;font-size:22px;color:#1a1818;font-family:$font;display:block;font-style: normal;}
         sup{font-size:26px;font-weight:500;line-height:46px}
         b{color:$secondary;font-family:$font2;font-size:45px}
     }
-    .upper-form{ display: flex; background: $secondary;
+    .upper-form{ display: flex; background: #fff;
         .btn {background-color: $primary; color: #fff;
             &:hover {background-color: #fff; color: $text;}
         }
-        h2{font-size: 50px; line-height: 1; text-align: left; font-family: $font2;flex: 1;color: #fff; margin: 20px auto; text-align: left;
+        h2{font-size: 45px; line-height: 50px; text-align: left; font-family: $font2;flex: 0 1 85%;color: #000; margin: 20px auto; text-align: left;
             small {display: block; font-size: 11px; text-transform: uppercase; padding: 10px 0;}
         }
         form{display:flex;justify-content:center;max-width:800px; margin:0 auto; align-items: center; padding: 0 35px;
             > div{padding:5px;flex:0 1 50%}
         }
-        > div { display: flex; justify-content: center;padding: 30px;max-width: 1100px; margin: auto;}
+        > div { display: flex; justify-content: center;padding: 50px 30px;max-width: 1150px; margin: auto;}
         article {padding: 40px; background: #fff; flex-basis: 50%;}
         .simple {
             input, textarea, .btn, select {width:100%}
-            input, select, textarea {background: #fff; color:#000; border: 2px solid rgba(255,255,255,.15);}
+            input, select, textarea {background: #EFEFEF; min-width: 300px;color:#000; border: 2px solid rgba(255,255,255,.15);}
             input, select {height:48px;
                 &:focus{background: $primary;}
             }
@@ -175,9 +249,14 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
         :-ms-input-placeholder{color:#fff}
         ::placeholder{color:#000}
     }
+    #cosmetic-list {background-color: #1D2122;padding: 50px 10px;
+        h3 {margin: 0;color: #fff;font-size: 26px;font-family: $font;font-weight: 700;
+            span {font-size: 20px;margin: 0 10px;}
+        }
+    }
     #lp-slider {
-        h2 {font-family:$font;font-size:45px;font-weight:300;line-height:1;color:#0F0D0D;text-shadow:none;margin:0 0 20px;text-align:center;
-            span {font-size:24px;color:#1a1818;font-family:$font;display:block}
+        h2 {font-family:$font2;font-size:45px;font-weight:300;line-height:1;color:#0F0D0D;text-shadow:none;margin:0 0 20px;text-align:center;
+            span {font-size:22px;color:#1a1818;font-family:$font;display:block}
         }
     }
     .flex-ed{display:flex;flex-wrap:wrap;justify-content:space-around;align-items: center; background: #f0f0f0;
@@ -238,11 +317,9 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
     }
 }
 
-#reviews{ background: rgb(52,75,96); background: linear-gradient(90deg, rgba(52,75,96,1) 0%, rgba(27,40,52,1) 100%);  padding:30px 10px;
+#reviews{ background-color: #1D2122;  padding:20px 10px;
     p, span {color:#fff}
-    .comment {position: relative;
-        &:before {font-family: 'fontello'; content: "\e838"; position: absolute;transform: rotateZ(180deg);font-size: 75px;left: -40px;top: -55px;color: #5E82AC;}
-    }
+    
     h2{color:#FFF}
     star{display:inline;line-height:1;
         &:after{color:#febb21;font-size:17px;letter-spacing:6px}
@@ -252,16 +329,29 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
         > div{flex:0 1 600px;position:relative;margin:30px 40px;font-size:45px;line-height:1;font-family:$font;
             &:first-of-type{padding-left:55px;}
             h2 {
-                font-size: 54px;font-weight: 400;
-                &:first-of-type {color: #fff;font-style:italic;
+                font-size: 45px;font-weight: 400;text-align:left;
+                &:first-of-type {color: #fff;
                     span {font-size: 90px;}
+                }
+            } 
+            .comment {position: relative;text-align:left;font-size: 28px;font-weight: 700;line-height: 34px;margin-bottom: 0;
+                &:before {font-family: 'fontello'; content: "\e838"; position: absolute;transform: rotateZ(180deg);font-size: 75px;left: -50px;top: 8px;color: rgba(186, 186, 186, 0.15);}
+            }
+            .author{float: right;display:inline;font-size:18px; font-weight: bold; letter-spacing: 0.2em; text-transform: uppercase;}
+            p:last-of-type {
+                text-align:left;clear:right;
+                .btn{background-color: $primary; font-family: $font; font-weight: 700; font-size: 18px; letter-spacing: 0.1em; 
+                    &:hover{background-color:#fff;color: $text;}
                 }
             }
         }
+        > div:last-of-type {
+            h2 {text-align:center;font-size: 45px;
+                &:first-of-type {color: #82A8D1;font-size: 65px;}
+            }
+        }
     }
-    .btn{background-color: $primary; font-family: $font; font-weight: 700; font-size: 18px; letter-spacing: 0.1em; 
-        &:hover{background-color:#fff;color: $text;}
-    }
+    
 }
 
 #options {
@@ -286,7 +376,7 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
 #team {
     figure {
         max-width: 525px;
-        .caption{background-color:rgba(255, 255, 255, 0.8);position:absolute;left:50%;transform:translateX(-50%);bottom:0;color:$text;padding:5px 10px;width:100%;line-height:1.3;max-width:575px;letter-spacing:.95px;font-size:15px; text-transform: uppercase;}    
+        .caption{background-color:rgba(255, 255, 255, 0.9);position:absolute;font-weight: 300;left:50%;transform:translateX(-50%);bottom:0;color:$text;padding:5px 10px;width:100%;line-height:1.3;max-width:575px;letter-spacing:.95px;font-size:18px; text-transform: uppercase;}    
     }
         a{color:#fff;font-weight: 700;
         &:hover {color: $primary;}
@@ -294,35 +384,41 @@ figcaption {position: absolute; bottom: 0; right: 50%; transform: translate(50%)
     span{margin:0 10px;}
 }
 
-#choice{padding:30px 10px;background-color: #E9E9E9;}
+#choice{padding:30px 10px;background-color: #fff;}
 
 
 
 /* ---------------- Contact --------------- */
 
-footer { padding-top: 70px;  background: rgb(52,75,96); background: linear-gradient(180deg, rgba(52,75,96,1) 0%, rgba(27,40,52,1) 100%); 
-    .flex-ed {justify-content: center; align-items: center;  padding-bottom: 30px;}
+footer { padding-top: 70px; background-color: #F2F6FB; 
+    .flex-ed {justify-content: center; align-items: center;  padding-bottom: 30px;
+        > * {background-color: #fff;}
+    }
     article { 
-        min-height: 430px;background-color: $tertiary; border-radius: 15px; text-align: center; margin: 10px; flex: 0 1 340px;padding: 10px; box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.35);display: flex;flex-wrap: wrap;justify-content: center;align-items: center;
+        min-height: 430px; border-radius: 15px; text-align: center; margin: 10px; flex: 0 1 340px;padding: 10px; box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.35);display: flex;flex-wrap: wrap;justify-content: center;align-items: center;
         > * {flex: 100%;}
     }
-    #services {padding: 35px 10px}
+    #services {padding: 10px;
+        .btn {padding: 20px 10px;margin: 5px 0;}
+    }
     .phone {font-size: 40px;color: $primary; margin: 10px auto; font-weight: 700; display: block; letter-spacing: 0.28px; font-family: $font;
         span {color: #fff;}
         &:hover {color: $secondary; }
     }
-    .address { color: #fff;font-size: 22px; line-height: 1.1; margin-top: 20px;
+    .address { color: #231F20;font-size: 20px; line-height: 1.1; margin-top: 20px;
         &:hover {color: $secondary; }
     }
-    h3 { margin-top: 20px; margin-bottom: 20px; color: #fff; font-weight: 500; font-size: 30px; font-family: $font;}
-    #footer-form h3 {font-size: 45px;font-style: italic;margin-bottom: 0;}
+    h3 {margin-top: 20px; margin-bottom: 20px; color: #324248; font-weight: 500; font-size: 30px; font-family: $font2;}
+    #footer-form h3 {margin-bottom: 0;}
+    .simple {margin: 0 0 5px;}
 }
 #services {
     h3 {font-size: 30px;}}
 #contact {flex: 0 1 430px;padding: 30px 10px 20px;
     h3 {font-size: 36px; margin-top: 20px; margin-bottom: 25px;}}
-#map {display: table; border-radius: 10px; overflow: hidden;margin: 0 30px;
-    iframe {display: block;}
+#map {display: table; border-radius: 10px; overflow: hidden;margin: 0 30px;flex: 0 1 580px;padding: 0 0 35px;box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    iframe {display: block;margin: auto;}
+    h2 {margin: 30px auto; font-size: 35px;}
 }
 
 #services {
@@ -355,10 +451,10 @@ footer { padding-top: 70px;  background: rgb(52,75,96); background: linear-gradi
 }
 ::placeholder { color: $text; }
 
-.copy {  font: 400 18px/1.4 $font; color: #fff;  margin-top: 20px; text-align: center; padding:10px 0 60px; opacity: 0.4;
+.copy {  font: 400 20px/1.4 $font; color: #000; text-transform:uppercase; margin-top: 20px; text-align: center; padding:10px 0 60px; opacity: 0.4;
    span {padding: 0 5px;}
-   a { margin: auto;  color: #fff;;
-       &:hover { color: $primary;}
+   a { margin: auto; color:$primary;
+       &:hover { color: $secondary}
     }
 }
 
@@ -376,32 +472,46 @@ footer { padding-top: 70px;  background: rgb(52,75,96); background: linear-gradi
 
 hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
 
+@media(min-width: 1800px) {
+    #banner figure {width: 900px;}
+}
+@media(min-width: 1600px) and (max-width: 1799px) {
+    #banner figure {width: 800px;}
+}
 @media (max-width: 1300px) {
     #banner {background-position: 10%;}
-    #banner article {margin-right: 0; flex: 0 1 500px;}
+}
+@media (max-width: 1200px) {
+    #nav {flex-wrap:wrap;}
+    #nav .logo {width:100%;margin: 20px;}
+    #nav #header-details {margin: 0 auto 30px;}
 }
 @media (max-width: 1110px) {
     h1{font-size:50px}
-    #banner article{flex:0 1 51%}
     .address{font-size:16px}
     .phone{font-size:32px}
 }
-
+@media (min-width: 1000px) {#mobile-btns {display:none;}}
 @media (max-width: 1000px) {
     header .address{display:none}
     header .btn{margin:0;-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}
     header .flex-ed{-ms-flex-pack:distribute;justify-content:space-around}
+    #nav {padding:0;}
+    #nav .phone {font-size: 30px;font-weight: 300;background-color: #96A7BB;color: #fff;}
+    #nav .phone span {color: #fff;font-weight: 700;}
+    #nav > .btn, #nav #header-details {display: none;}
     hr{display:block;max-width:95%}
     .phone{font-size:24px}
     .covid span{display:block;font-size:0}
     #banner{background:none}
     #banner:before{top:0;bottom:0}
-    #banner article{min-width:450px;padding:40px 10px 10px;background-color:$secondary}
-    #banner .flex-ed{display:block}
-    #banner article{margin:0 auto 20px;padding-top:20px}
+    #banner article{width: 100%;margin: 0;min-width:450px;padding:40px 10px 10px;background-color:#fff}
+    #banner .flex-ed{flex-wrap: wrap;}
+    #banner article{margin:0 auto;padding-top:20px}
     #banner article div{max-width:500px;margin:10px auto 15px}
     #banner figure{display:block}
     #banner figure img{width:100%;display:block}
+    #banner > * {flex: auto;}
     #lp-slider{margin-top:30px}
     .upper-form{flex-direction:column;padding:30px 10px}
     .upper-form h2{text-align:center;font-size:30px}
@@ -418,7 +528,7 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     .split article h2,.split article p {text-align: center;}
     .split article .btn{float:none;margin:auto;display:table}
     .split figure{margin:20px auto}
-    .services .upper-form > div {flex-wrap:wrap;}
+    .services .upper-form > div {flex-wrap:wrap;padding: 0 30px;}
     .services .upper-form h2 {text-align:center;}
     #choice figure{margin-bottom:0}
     #secondary{padding:15px 0}
@@ -428,7 +538,6 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #contact {flex: 0 1 690px;}
     #services, #footer-form {flex: 1;}
     .frame iframe {height: 400px;}
-    #banner article h1 {color: #fff;}
 }
 
 #services ul{margin-top:20px;padding-left:0;margin-bottom:10px}
@@ -444,9 +553,13 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #patients .flex-ed article author { text-align: right;}
     .services .upper-form form > div {flex: auto; width: 100%;padding: 2px;}
     #callouts {padding: 0;}
+    .services #cosmetic-list h3 {display: flex;justify-content: center;flex-wrap: wrap;}
+    .services #cosmetic-list h3 > * {width: 100%;}
 }
 
 @media (max-width: 740px) {
+    #nav .logo {margin: 30px;}
+    #nav .logo img {width: 80%;}
     #banner {max-height: none;}
     .services .upper-form form {max-width: none; padding: 0;}
     header{padding:0}
@@ -480,7 +593,6 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
 
 @media (max-width: 590px) {
     .services .upper-form h2 {font-size: revert;}
-    #nav .logo{margin-bottom:10px;max-width:90%}
     header .address{display:none}
     #banner h1 small{font-size:28px}
     #banner article{min-width:300px;margin-bottom: 0;}
@@ -493,6 +605,8 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #reviews .flex-ed > div:last-of-type {width: 100%;}
     #reviews .flex-ed > div h2:first-of-type span {font-size: 58px;}
     #services-custom{padding:0}
+    .split article ul li {font-size: 20px;}
+    #reviews .flex-ed > div p:last-of-type {text-align:center;}
     .upper-form form{flex-direction:column}
     .services ul{margin:0 auto}
     #fixed-tabs .map{display:block}

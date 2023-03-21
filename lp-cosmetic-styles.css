@@ -497,7 +497,7 @@ star:after {
 }
 
 #fixed-tabs a:nth-of-type(odd) {
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   color: #000000;
 }
 
@@ -536,12 +536,12 @@ body {
   background: #fff;
   text-align: center;
   color: #231f20;
-  font: 400 18px/26px "Lato", sans-serif;
+  font: 400 18px/26px "Source Sans Pro", sans-serif;
 }
 
 p {
   color: #000000;
-  font: 400 18px/1.6 "Lato", sans-serif;
+  font: 400 18px/1.6 "Source Sans Pro", sans-serif;
   letter-spacing: 0.36px;
 }
 
@@ -549,22 +549,22 @@ a {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: #5E82AC;
+  color: #82A8D1;
 }
 
 a:hover {
-  color: #5E82AC;
+  color: #82A8D1;
 }
 
 h1, h2 h3, h4, h5, h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display SC", serif;
   text-align: center;
 }
 
 h1 {
   margin: 0;
   color: #102430;
-  font: 400 45px/1.3 "Lato", sans-serif;
+  font: 400 45px/1.3 "Playfair Display SC", serif;
   letter-spacing: 1.1px;
 }
 
@@ -574,13 +574,13 @@ h1 small {
 }
 
 h2, .h2-like {
-  font: 300 50px/1.1 "Lato", sans-serif, sans-serif;
+  font: 300 50px/1.1 "Playfair Display SC", serif, sans-serif;
   color: #000000;
   margin: 10px 0;
 }
 
 h3, .h3 {
-  font: 400 30px/30px "Lato", sans-serif;
+  font: 400 30px/30px "Playfair Display SC", serif;
   color: #000000;
   margin: 15px auto 10px;
   letter-spacing: 0.75px;
@@ -607,7 +607,7 @@ main ul li:before {
   position: absolute;
   left: 0;
   top: 0;
-  color: #5E82AC;
+  color: #82A8D1;
 }
 
 .btn, .btn-alt {
@@ -617,9 +617,9 @@ main ul li:before {
   padding: 15px 20px;
   text-align: center;
   color: #fff;
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   text-transform: uppercase;
-  font: 700 18px/1.1 "Lato", sans-serif, sans-serif;
+  font: 700 18px/1.1 "Source Sans Pro", sans-serif, sans-serif;
   letter-spacing: 1.8px;
 }
 
@@ -632,7 +632,7 @@ main ul li:before {
 }
 
 .btn:hover, .btn-alt:hover {
-  background-color: #5E82AC;
+  background-color: #82A8D1;
   color: #fff;
 }
 
@@ -642,55 +642,164 @@ main ul li:before {
 }
 
 .btn-alt:hover {
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   color: white;
 }
 
 header {
   position: relative;
-  padding: 5px 10px;
-  background: #fff;
+  padding: 0;
+  z-index: 100;
+  background-color: #E6EEF6;
 }
-header .flex-ed {
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  max-width: 1400px;
-  margin: auto;
-  width: 100%;
-  padding: 10px 30px;
+header .locations {
+  flex: 0 1 510px;
 }
-header .btn {
-  margin: 0;
-  min-width: 200px;
-  font-size: 16px;
-  letter-spacing: normal;
-  padding: 10px 15px;
-  font-weight: bold;
-}
-header .btn span {
-  font-size: 29px;
-  letter-spacing: 0.05em;
-  line-height: 0.9;
-}
-header .btn:before {
-  display: none;
-}
-header .btn:hover {
-  background-color: #00BBF2;
-}
-header .hd-info {
-  display: flex;
+header .locations > span {
+  border-radius: 25px;
+  padding: 3px 20px;
   text-align: center;
+  font: 500 20px/1.1 "Source Sans Pro", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #4C89BE;
+  color: #fff;
+  display: table;
+  margin: auto auto 10px;
+}
+header .locations .flex-ed {
+  justify-content: space-around;
+}
+header address {
+  padding: 0 8px;
+}
+header .address {
+  display: flex;
+  color: #000;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.55px;
+  margin-bottom: 10px;
+}
+header .address:hover {
+  color: #82A8D1;
+}
+header .address i:before {
+  color: #4C89BE;
+  font-size: 22px;
+  margin-left: -10px;
+  margin-right: 15px;
+}
+
+.fix-nav header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-name: slideIn;
+  z-index: 999;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+}
+.fix-nav header .logo {
+  margin-bottom: 0;
+}
+.fix-nav header .logo img {
+  max-height: 80px;
+}
+
+.pho {
+  display: flex;
+  color: #000;
+  font: 700 37px/30px "Source Sans Pro", sans-serif;
+}
+.pho span {
+  display: block;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.pho:hover {
+  color: #000000;
+}
+.pho i {
+  display: flex;
+  align-items: center;
+}
+.pho i:before {
+  color: #4C89BE;
+  font-size: 22px;
+  margin-left: 0px;
+  margin-right: 15px;
+}
+
+#nav {
+  display: flex;
+  max-width: 1350px;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  padding: 30px 10px;
+}
+#nav .btn {
+  margin: 0;
+  font-size: 21px;
+  min-width: 200px;
+  text-transform: none;
+  display: flex;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+}
+#nav .btn span {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+#nav .btn i:before {
+  margin-right: 10px;
+}
+#nav #mobile-btns {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#nav #mobile-btns > * {
   flex: 1;
-  justify-content: space-evenly;
+  height: 77px;
+}
+#nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+#nav #mobile-btns .btn span {
+  width: 100%;
+}
+#nav #mobile-btns .phone, #nav #mobile-btns .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+#nav #mobile-btns .phone span, #nav #mobile-btns .btn span {
+  width: 100%;
 }
 
 .phone {
-  color: #00BBF2;
+  color: #4C89BE;
   font-size: 35px;
   line-height: 1.1;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
 }
 .phone span {
@@ -711,21 +820,7 @@ header .hd-info {
   color: #000000;
 }
 .address:hover {
-  color: #00BBF2;
-}
-
-.fix-nav header {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  right: 0;
-  animation: slideIn 0.8s both;
-  box-shadow: 1.6px 2.5px 7px rgba(6, 7, 7, 0.35);
-  z-index: 2000;
-}
-.fix-nav header .logo img {
-  max-height: 70px;
+  color: #4C89BE;
 }
 
 .split {
@@ -747,7 +842,20 @@ header .hd-info {
 .split article h2 {
   color: #324248;
   margin-bottom: 30px;
-  font-style: italic;
+  font-size: 45px;
+}
+.split article ul {
+  margin-left: 0;
+}
+.split article ul li {
+  margin: 20px auto;
+  font-size: 30px;
+  padding-left: 45px;
+}
+.split article ul li:before {
+  font-size: 24px;
+  color: #96A7BB;
+  top: 3px;
 }
 .split .btn {
   margin: 15px 0;
@@ -765,11 +873,10 @@ header .hd-info {
 figcaption {
   position: absolute;
   bottom: 0;
-  right: 50%;
-  transform: translate(50%);
-  font-weight: bold;
-  color: #fff;
-  background: #000;
+  width: 100%;
+  color: #000;
+  letter-spacing: 1px;
+  background: rgba(255, 255, 255, 0.9);
   text-transform: uppercase;
   padding: 5px 50px;
 }
@@ -787,86 +894,65 @@ figcaption {
 }
 
 #banner {
-  border-bottom: 15px solid #5E82AC;
-  max-height: 600px;
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-  background: url(assets/images/lp-cosmetic-banner-2023.jpg) center no-repeat;
-  background-size: cover;
-  justify-content: space-around;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-#banner .flex-ed {
-  overflow: hidden;
-  justify-content: center;
-}
-#banner .flex-ed > * {
-  flex-basis: 50%;
+#banner > * {
+  flex: 1 0 500px;
 }
 #banner figure {
-  flex: 0 1 50%;
+  margin: 0;
   position: relative;
+  order: 1;
+  text-align: center;
 }
 #banner figure img {
-  display: none;
+  width: 100%;
+  position: relative;
+  width: 100%;
 }
-#banner figure .caption a {
+#banner h1 {
+  font-size: 60px;
   color: #fff;
-  font: 400 19px/1 "Barlow Condensed", sans-serif;
-  padding: 0 5px;
+  letter-spacing: normal;
+  line-height: 60px;
+  text-align: center;
 }
-#banner figure .caption a:hover {
-  color: #5E82AC;
+#banner h1 strong {
+  display: block;
+  font-size: 104px;
+  line-height: 1;
+  font-family: "Playfair Display SC", serif;
 }
 #banner article {
-  padding: 50px 10px;
-  margin-left: 20px;
-  z-index: 1;
-  flex: 0 1 610px;
-  margin-right: 50px;
-}
-#banner article > div {
-  font: 400 25px/41px "Lato", sans-serif;
-  color: #102430;
-  letter-spacing: 2.3px;
-  text-align: center;
-  margin: 40px auto 0;
-  padding: 5px 0;
-}
-#banner article > div span {
-  display: block;
-  letter-spacing: 3.6px;
-  font: 400 55px/0.9 "Barlow Condensed", sans-serif;
-  margin: 0 auto 5px;
-  display: block;
-  letter-spacing: 5.5px;
-}
-#banner article h1 {
-  margin-bottom: 30px;
-  line-height: 1;
-  font-size: 77px;
-  color: #5E82AC;
-  font-family: "Lato", sans-serif;
-  font-style: italic;
-  font-weight: 200;
+  order: 2;
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+  display: flex;
   margin: auto;
-}
-#banner article h1 span {
-  display: block;
-  font-weight: 700;
-  font-size: 77px;
-  font-family: "Lato", sans-serif;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
 }
 #banner article p {
-  color: #000000;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 40px;
-  max-width: 480px;
-  margin: 40px auto;
+  font-size: 25px;
+  line-height: 30px;
 }
-#banner ul li {
-  color: white;
+#banner article * {
+  color: #000;
+}
+#banner #stamps {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#banner #stamps img {
+  margin: 0;
 }
 
 #callouts {
@@ -890,7 +976,7 @@ figcaption {
   margin: 50px auto;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #00BBF2;
+  border: 2px solid #4C89BE;
 }
 #patients .flex-ed article {
   position: relative;
@@ -928,7 +1014,7 @@ figcaption {
   top: -9px;
   left: -9px;
   content: "";
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -938,14 +1024,13 @@ figcaption {
 }
 
 #services-custom {
-  background: rgb(52, 75, 96);
-  background: linear-gradient(180deg, rgb(52, 75, 96) 0%, rgb(27, 40, 52) 100%);
-  padding: 2em;
+  background-color: #96A7BB;
+  padding: 4em 2em;
 }
 
 .services {
   background-color: #fff;
-  border: 10px solid #5E82AC;
+  border: 6px solid #1D2122;
   text-align: center;
   max-width: 1260px;
   margin: 0 auto;
@@ -955,6 +1040,9 @@ figcaption {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 40px;
+}
+.services > div:first-of-type article {
+  max-width: 550px;
 }
 .services h1 {
   font-size: 24px;
@@ -985,19 +1073,20 @@ figcaption {
 .services h2 {
   font-size: 45px;
   font-weight: 300;
-  font-style: italic;
   line-height: 1;
   color: #000000;
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display SC", serif;
   text-shadow: none;
   margin: 0 0 20px;
   text-align: center;
 }
 .services h2 span {
   font-weight: 400;
-  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
   color: #1a1818;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: block;
   font-style: normal;
 }
@@ -1007,16 +1096,16 @@ figcaption {
   line-height: 46px;
 }
 .services h2 b {
-  color: #5E82AC;
-  font-family: "Lato", sans-serif;
+  color: #82A8D1;
+  font-family: "Playfair Display SC", serif;
   font-size: 45px;
 }
 .services .upper-form {
   display: flex;
-  background: #5E82AC;
+  background: #fff;
 }
 .services .upper-form .btn {
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   color: #fff;
 }
 .services .upper-form .btn:hover {
@@ -1024,12 +1113,12 @@ figcaption {
   color: #000000;
 }
 .services .upper-form h2 {
-  font-size: 50px;
-  line-height: 1;
+  font-size: 45px;
+  line-height: 50px;
   text-align: left;
-  font-family: "Lato", sans-serif;
-  flex: 1;
-  color: #fff;
+  font-family: "Playfair Display SC", serif;
+  flex: 0 1 85%;
+  color: #000;
   margin: 20px auto;
   text-align: left;
 }
@@ -1054,8 +1143,8 @@ figcaption {
 .services .upper-form > div {
   display: flex;
   justify-content: center;
-  padding: 30px;
-  max-width: 1100px;
+  padding: 50px 30px;
+  max-width: 1150px;
   margin: auto;
 }
 .services .upper-form article {
@@ -1067,7 +1156,8 @@ figcaption {
   width: 100%;
 }
 .services .upper-form .simple input, .services .upper-form .simple select, .services .upper-form .simple textarea {
-  background: #fff;
+  background: #EFEFEF;
+  min-width: 300px;
   color: #000;
   border: 2px solid rgba(255, 255, 255, 0.15);
 }
@@ -1075,14 +1165,14 @@ figcaption {
   height: 48px;
 }
 .services .upper-form .simple input:focus, .services .upper-form .simple select:focus {
-  background: #00BBF2;
+  background: #4C89BE;
 }
 .services .upper-form .simple textarea {
   height: 101px;
   margin-top: 0;
 }
 .services .upper-form .simple textarea:focus {
-  background: #00BBF2;
+  background: #4C89BE;
 }
 .services .upper-form ::-moz-placeholder {
   color: #fff;
@@ -1090,8 +1180,23 @@ figcaption {
 .services .upper-form ::placeholder {
   color: #000;
 }
+.services #cosmetic-list {
+  background-color: #1D2122;
+  padding: 50px 10px;
+}
+.services #cosmetic-list h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 26px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+}
+.services #cosmetic-list h3 span {
+  font-size: 20px;
+  margin: 0 10px;
+}
 .services #lp-slider h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display SC", serif;
   font-size: 45px;
   font-weight: 300;
   line-height: 1;
@@ -1101,9 +1206,9 @@ figcaption {
   text-align: center;
 }
 .services #lp-slider h2 span {
-  font-size: 24px;
+  font-size: 22px;
   color: #1a1818;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   display: block;
 }
 .services .flex-ed {
@@ -1134,8 +1239,8 @@ figcaption {
   color: #000;
 }
 .services .flex-ed h2 b {
-  color: #5E82AC;
-  font-family: "Lato", sans-serif;
+  color: #82A8D1;
+  font-family: "Playfair Display SC", serif;
   font-size: 45px;
 }
 .services .flex-ed:first-of-type {
@@ -1175,7 +1280,7 @@ figcaption {
 .services ul li {
   font-size: 20px;
   line-height: 30px;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   text-align: left;
   padding-left: 40px;
@@ -1196,7 +1301,7 @@ figcaption {
 }
 .services p {
   font-size: 12px;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-top: 5px;
 }
 
@@ -1222,7 +1327,7 @@ figcaption {
   box-shadow: 0 3px 7px rgba(2, 3, 3, 0.35);
 }
 #lp-slider .ba-slider-wrapper .ba-slider span {
-  background: #00BBF2;
+  background: #4C89BE;
   display: block;
   height: 100%;
   position: absolute;
@@ -1291,25 +1396,11 @@ figcaption {
   }
 }
 #reviews {
-  background: rgb(52, 75, 96);
-  background: linear-gradient(90deg, rgb(52, 75, 96) 0%, rgb(27, 40, 52) 100%);
-  padding: 30px 10px;
+  background-color: #1D2122;
+  padding: 20px 10px;
 }
 #reviews p, #reviews span {
   color: #fff;
-}
-#reviews .comment {
-  position: relative;
-}
-#reviews .comment:before {
-  font-family: "fontello";
-  content: "\e838";
-  position: absolute;
-  transform: rotateZ(180deg);
-  font-size: 75px;
-  left: -40px;
-  top: -55px;
-  color: #5E82AC;
 }
 #reviews h2 {
   color: #FFF;
@@ -1342,32 +1433,70 @@ figcaption {
   margin: 30px 40px;
   font-size: 45px;
   line-height: 1;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 #reviews .flex-ed > div:first-of-type {
   padding-left: 55px;
 }
 #reviews .flex-ed > div h2 {
-  font-size: 54px;
+  font-size: 45px;
   font-weight: 400;
+  text-align: left;
 }
 #reviews .flex-ed > div h2:first-of-type {
   color: #fff;
-  font-style: italic;
 }
 #reviews .flex-ed > div h2:first-of-type span {
   font-size: 90px;
 }
-#reviews .btn {
-  background-color: #00BBF2;
-  font-family: "Lato", sans-serif;
+#reviews .flex-ed > div .comment {
+  position: relative;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 0;
+}
+#reviews .flex-ed > div .comment:before {
+  font-family: "fontello";
+  content: "\e838";
+  position: absolute;
+  transform: rotateZ(180deg);
+  font-size: 75px;
+  left: -50px;
+  top: 8px;
+  color: rgba(186, 186, 186, 0.15);
+}
+#reviews .flex-ed > div .author {
+  float: right;
+  display: inline;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+#reviews .flex-ed > div p:last-of-type {
+  text-align: left;
+  clear: right;
+}
+#reviews .flex-ed > div p:last-of-type .btn {
+  background-color: #4C89BE;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.1em;
 }
-#reviews .btn:hover {
+#reviews .flex-ed > div p:last-of-type .btn:hover {
   background-color: #fff;
   color: #000000;
+}
+#reviews .flex-ed > div:last-of-type h2 {
+  text-align: center;
+  font-size: 45px;
+}
+#reviews .flex-ed > div:last-of-type h2:first-of-type {
+  color: #82A8D1;
+  font-size: 65px;
 }
 
 #options div {
@@ -1383,7 +1512,7 @@ figcaption {
   border-color: #fff;
 }
 #options:hover:after {
-  border-color: #5E82AC;
+  border-color: #82A8D1;
 }
 
 #secondary {
@@ -1412,15 +1541,16 @@ figcaption {
 }
 #secondary .icon-map-marker {
   font-size: 30px;
-  color: #5E82AC;
+  color: #82A8D1;
 }
 
 #team figure {
   max-width: 525px;
 }
 #team figure .caption {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
+  font-weight: 300;
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
@@ -1430,7 +1560,7 @@ figcaption {
   line-height: 1.3;
   max-width: 575px;
   letter-spacing: 0.95px;
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 #team a {
@@ -1438,7 +1568,7 @@ figcaption {
   font-weight: 700;
 }
 #team a:hover {
-  color: #00BBF2;
+  color: #4C89BE;
 }
 #team span {
   margin: 0 10px;
@@ -1446,23 +1576,24 @@ figcaption {
 
 #choice {
   padding: 30px 10px;
-  background-color: #E9E9E9;
+  background-color: #fff;
 }
 
 /* ---------------- Contact --------------- */
 footer {
   padding-top: 70px;
-  background: rgb(52, 75, 96);
-  background: linear-gradient(180deg, rgb(52, 75, 96) 0%, rgb(27, 40, 52) 100%);
+  background-color: #F2F6FB;
 }
 footer .flex-ed {
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
 }
+footer .flex-ed > * {
+  background-color: #fff;
+}
 footer article {
   min-height: 430px;
-  background-color: #373635;
   border-radius: 15px;
   text-align: center;
   margin: 10px;
@@ -1478,44 +1609,49 @@ footer article > * {
   flex: 100%;
 }
 footer #services {
-  padding: 35px 10px;
+  padding: 10px;
+}
+footer #services .btn {
+  padding: 20px 10px;
+  margin: 5px 0;
 }
 footer .phone {
   font-size: 40px;
-  color: #00BBF2;
+  color: #4C89BE;
   margin: 10px auto;
   font-weight: 700;
   display: block;
   letter-spacing: 0.28px;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 footer .phone span {
   color: #fff;
 }
 footer .phone:hover {
-  color: #5E82AC;
+  color: #82A8D1;
 }
 footer .address {
-  color: #fff;
-  font-size: 22px;
+  color: #231F20;
+  font-size: 20px;
   line-height: 1.1;
   margin-top: 20px;
 }
 footer .address:hover {
-  color: #5E82AC;
+  color: #82A8D1;
 }
 footer h3 {
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #324248;
   font-weight: 500;
   font-size: 30px;
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display SC", serif;
 }
 footer #footer-form h3 {
-  font-size: 45px;
-  font-style: italic;
   margin-bottom: 0;
+}
+footer .simple {
+  margin: 0 0 5px;
 }
 
 #services h3 {
@@ -1537,9 +1673,17 @@ footer #footer-form h3 {
   border-radius: 10px;
   overflow: hidden;
   margin: 0 30px;
+  flex: 0 1 580px;
+  padding: 0 0 35px;
+  box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.35);
 }
 #map iframe {
   display: block;
+  margin: auto;
+}
+#map h2 {
+  margin: 30px auto;
+  font-size: 35px;
 }
 
 #services ul {
@@ -1551,14 +1695,14 @@ footer #footer-form h3 {
   margin: 10px auto;
   list-style: none;
   text-align: center;
-  border: 1px solid #00BBF2;
-  background-color: #00BBF2;
+  border: 1px solid #4C89BE;
+  background-color: #4C89BE;
 }
 #services li a {
   display: block;
   color: #fff;
   font-weight: 500;
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display SC", serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -1568,7 +1712,7 @@ footer #footer-form h3 {
   color: #fff;
 }
 #services li:hover {
-  background-color: #5E82AC;
+  background-color: #82A8D1;
 }
 #services li:hover a {
   color: white !important;
@@ -1587,11 +1731,11 @@ footer #footer-form h3 {
   font-weight: 700;
   padding: 15px 10px;
   min-width: auto;
-  background-color: #00BBF2;
+  background-color: #4C89BE;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
 }
 .simple .btn:hover {
-  background-color: #5E82AC;
+  background-color: #82A8D1;
 }
 .simple input {
   height: 45px;
@@ -1612,7 +1756,7 @@ footer #footer-form h3 {
 }
 .simple input:focus, .simple textarea:focus, .simple .btn:focus {
   background-color: #f7f4f4;
-  box-shadow: inset 0 3px 0 #5E82AC;
+  box-shadow: inset 0 3px 0 #82A8D1;
 }
 
 ::-moz-placeholder {
@@ -1624,8 +1768,9 @@ footer #footer-form h3 {
 }
 
 .copy {
-  font: 400 18px/1.4 "Lato", sans-serif;
-  color: #fff;
+  font: 400 20px/1.4 "Source Sans Pro", sans-serif;
+  color: #000;
+  text-transform: uppercase;
   margin-top: 20px;
   text-align: center;
   padding: 10px 0 60px;
@@ -1636,10 +1781,10 @@ footer #footer-form h3 {
 }
 .copy a {
   margin: auto;
-  color: #fff;
+  color: #4C89BE;
 }
 .copy a:hover {
-  color: #00BBF2;
+  color: #82A8D1;
 }
 
 #landing-page-form {
@@ -1693,27 +1838,47 @@ hr {
   margin-top: 30px;
 }
 
+@media (min-width: 1800px) {
+  #banner figure {
+    width: 900px;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1799px) {
+  #banner figure {
+    width: 800px;
+  }
+}
 @media (max-width: 1300px) {
   #banner {
     background-position: 10%;
   }
-  #banner article {
-    margin-right: 0;
-    flex: 0 1 500px;
+}
+@media (max-width: 1200px) {
+  #nav {
+    flex-wrap: wrap;
+  }
+  #nav .logo {
+    width: 100%;
+    margin: 20px;
+  }
+  #nav #header-details {
+    margin: 0 auto 30px;
   }
 }
 @media (max-width: 1110px) {
   h1 {
     font-size: 50px;
   }
-  #banner article {
-    flex: 0 1 51%;
-  }
   .address {
     font-size: 16px;
   }
   .phone {
     font-size: 32px;
+  }
+}
+@media (min-width: 1000px) {
+  #mobile-btns {
+    display: none;
   }
 }
 @media (max-width: 1000px) {
@@ -1726,6 +1891,22 @@ hr {
   }
   header .flex-ed {
     justify-content: space-around;
+  }
+  #nav {
+    padding: 0;
+  }
+  #nav .phone {
+    font-size: 30px;
+    font-weight: 300;
+    background-color: #96A7BB;
+    color: #fff;
+  }
+  #nav .phone span {
+    color: #fff;
+    font-weight: 700;
+  }
+  #nav > .btn, #nav #header-details {
+    display: none;
   }
   hr {
     display: block;
@@ -1746,15 +1927,17 @@ hr {
     bottom: 0;
   }
   #banner article {
+    width: 100%;
+    margin: 0;
     min-width: 450px;
     padding: 40px 10px 10px;
-    background-color: #5E82AC;
+    background-color: #fff;
   }
   #banner .flex-ed {
-    display: block;
+    flex-wrap: wrap;
   }
   #banner article {
-    margin: 0 auto 20px;
+    margin: 0 auto;
     padding-top: 20px;
   }
   #banner article div {
@@ -1767,6 +1950,9 @@ hr {
   #banner figure img {
     width: 100%;
     display: block;
+  }
+  #banner > * {
+    flex: auto;
   }
   #lp-slider {
     margin-top: 30px;
@@ -1826,6 +2012,7 @@ hr {
   }
   .services .upper-form > div {
     flex-wrap: wrap;
+    padding: 0 30px;
   }
   .services .upper-form h2 {
     text-align: center;
@@ -1856,9 +2043,6 @@ hr {
   .frame iframe {
     height: 400px;
   }
-  #banner article h1 {
-    color: #fff;
-  }
 }
 #services ul {
   margin-top: 20px;
@@ -1870,7 +2054,7 @@ hr {
   margin: 7px auto;
   list-style: none;
   text-align: center;
-  background-color: #00BBF2;
+  background-color: #4C89BE;
 }
 
 #services li a {
@@ -1878,13 +2062,13 @@ hr {
   color: #fff;
   font-weight: 500;
   font-size: 19px;
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 1px;
   padding: 18px 20px 15px;
 }
 
 #services li:hover {
-  background-color: #5E82AC;
+  background-color: #82A8D1;
 }
 
 #services li:hover a {
@@ -1912,8 +2096,22 @@ hr {
   #callouts {
     padding: 0;
   }
+  .services #cosmetic-list h3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .services #cosmetic-list h3 > * {
+    width: 100%;
+  }
 }
 @media (max-width: 740px) {
+  #nav .logo {
+    margin: 30px;
+  }
+  #nav .logo img {
+    width: 80%;
+  }
   #banner {
     max-height: none;
   }
@@ -1961,7 +2159,7 @@ hr {
   header .phone {
     font-size: 18px;
     color: #fff;
-    background-color: #5E82AC;
+    background-color: #82A8D1;
     border: 0;
     display: flex;
     flex-flow: column;
@@ -2029,10 +2227,6 @@ hr {
   .services .upper-form h2 {
     font-size: revert;
   }
-  #nav .logo {
-    margin-bottom: 10px;
-    max-width: 90%;
-  }
   header .address {
     display: none;
   }
@@ -2072,6 +2266,12 @@ hr {
   }
   #services-custom {
     padding: 0;
+  }
+  .split article ul li {
+    font-size: 20px;
+  }
+  #reviews .flex-ed > div p:last-of-type {
+    text-align: center;
   }
   .upper-form form {
     flex-direction: column;
