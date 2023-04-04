@@ -80,7 +80,7 @@ header{position:relative;padding:0;z-index:100;background-color: #E6EEF6;
         i:before {margin-right: 10px;}
     }
     #mobile-btns {
-        width: 100%; display: flex;flex-wrap: wrap;align-items: center;
+        width: 100%; display: none;flex-wrap: wrap;align-items: center;
         > * {flex: 1;height: 77px;}
         .btn {
             display: flex;flex-wrap: wrap; justify-content: center; border-radius: 0;text-transform:uppercase;
@@ -500,6 +500,7 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #nav .phone {font-size: 30px;font-weight: 300;background-color: #96A7BB;color: #fff;}
     #nav .phone span {color: #fff;font-weight: 700;}
     #nav > .btn, #nav #header-details {display: none;}
+    #nav #mobile-btns {display:flex!important;}
     hr{display:block;max-width:95%}
     .phone{font-size:24px}
     .covid span{display:block;font-size:0}
