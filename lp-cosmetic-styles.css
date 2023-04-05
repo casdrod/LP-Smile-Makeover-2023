@@ -483,7 +483,7 @@ star:after {
 }
 
 #fixed-tabs a {
-  font-size: 13px;
+  font-size: 14px;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
@@ -497,8 +497,8 @@ star:after {
 }
 
 #fixed-tabs a:nth-of-type(odd) {
-  background-color: #4C89BE;
-  color: #000000;
+  background-color: #26A2BE;
+  color: #fff;
 }
 
 #fixed-tabs a:nth-of-type(even) {
@@ -536,12 +536,12 @@ body {
   background: #fff;
   text-align: center;
   color: #231f20;
-  font: 400 18px/26px "Source Sans Pro", sans-serif;
+  font: 400 18px/26px "Maven Pro", sans-serif;
 }
 
 p {
   color: #000000;
-  font: 400 18px/1.6 "Source Sans Pro", sans-serif;
+  font: 400 20px/1.6 "Maven Pro", sans-serif;
   letter-spacing: 0.36px;
 }
 
@@ -549,22 +549,22 @@ a {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: #82A8D1;
+  color: #003041;
 }
 
 a:hover {
-  color: #82A8D1;
+  color: #003041;
 }
 
 h1, h2 h3, h4, h5, h6 {
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
 }
 
 h1 {
   margin: 0;
   color: #102430;
-  font: 400 45px/1.3 "Playfair Display SC", serif;
+  font: 400 45px/1.3 "Raleway", sans-serif;
   letter-spacing: 1.1px;
 }
 
@@ -574,13 +574,13 @@ h1 small {
 }
 
 h2, .h2-like {
-  font: 300 50px/1.1 "Playfair Display SC", serif, sans-serif;
+  font: 300 50px/1.1 "Raleway", sans-serif, sans-serif;
   color: #000000;
   margin: 10px 0;
 }
 
 h3, .h3 {
-  font: 400 30px/30px "Playfair Display SC", serif;
+  font: 400 30px/30px "Raleway", sans-serif;
   color: #000000;
   margin: 15px auto 10px;
   letter-spacing: 0.75px;
@@ -607,7 +607,7 @@ main ul li:before {
   position: absolute;
   left: 0;
   top: 0;
-  color: #82A8D1;
+  color: #003041;
 }
 
 .btn, .btn-alt {
@@ -617,9 +617,9 @@ main ul li:before {
   padding: 15px 20px;
   text-align: center;
   color: #fff;
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   text-transform: uppercase;
-  font: 700 18px/1.1 "Source Sans Pro", sans-serif, sans-serif;
+  font: 700 18px/1.1 "Maven Pro", sans-serif, sans-serif;
   letter-spacing: 1.8px;
 }
 
@@ -632,7 +632,7 @@ main ul li:before {
 }
 
 .btn:hover, .btn-alt:hover {
-  background-color: #82A8D1;
+  background-color: #003041;
   color: #fff;
 }
 
@@ -642,7 +642,7 @@ main ul li:before {
 }
 
 .btn-alt:hover {
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   color: white;
 }
 
@@ -650,7 +650,7 @@ header {
   position: relative;
   padding: 0;
   z-index: 100;
-  background-color: #E6EEF6;
+  background-color: #fff;
 }
 header .locations {
   flex: 0 1 510px;
@@ -659,10 +659,10 @@ header .locations > span {
   border-radius: 25px;
   padding: 3px 20px;
   text-align: center;
-  font: 500 20px/1.1 "Source Sans Pro", sans-serif;
+  font: 500 20px/1.1 "Maven Pro", sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   color: #fff;
   display: table;
   margin: auto auto 10px;
@@ -676,17 +676,17 @@ header address {
 header .address {
   display: flex;
   color: #000;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 1.25;
   font-weight: 400;
   letter-spacing: 0.55px;
   margin-bottom: 10px;
 }
 header .address:hover {
-  color: #82A8D1;
+  color: #003041;
 }
 header .address i:before {
-  color: #4C89BE;
+  color: #26A2BE;
   font-size: 22px;
   margin-left: -10px;
   margin-right: 15px;
@@ -714,7 +714,7 @@ header .address i:before {
 .pho {
   display: flex;
   color: #000;
-  font: 700 37px/30px "Source Sans Pro", sans-serif;
+  font: 700 37px/30px "Maven Pro", sans-serif;
 }
 .pho span {
   display: block;
@@ -722,7 +722,7 @@ header .address i:before {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
 }
 .pho:hover {
   color: #000000;
@@ -732,7 +732,7 @@ header .address i:before {
   align-items: center;
 }
 .pho i:before {
-  color: #4C89BE;
+  color: #26A2BE;
   font-size: 22px;
   margin-left: 0px;
   margin-right: 15px;
@@ -740,16 +740,18 @@ header .address i:before {
 
 #nav {
   display: flex;
-  max-width: 1350px;
+  max-width: 1400px;
   justify-content: space-between;
   margin: auto;
   align-items: center;
-  padding: 30px 10px;
+  padding: 20px 10px;
 }
 #nav .btn {
+  justify-content: center;
   margin: 0;
   font-size: 21px;
   min-width: 200px;
+  max-width: 400px;
   text-transform: none;
   display: flex;
   color: #fff;
@@ -758,18 +760,22 @@ header .address i:before {
 }
 #nav .btn span {
   display: block;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
 }
 #nav .btn i:before {
   margin-right: 10px;
 }
+#nav #header-details, #nav .logo, #nav > div {
+  flex: 1;
+}
 #nav #mobile-btns {
   width: 100%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   align-items: center;
+  flex: 100%;
 }
 #nav #mobile-btns > * {
   flex: 1;
@@ -778,6 +784,8 @@ header .address i:before {
 #nav #mobile-btns .btn {
   display: flex;
   flex-wrap: wrap;
+  font-size: 16px;
+  letter-spacing: 1;
   justify-content: center;
   border-radius: 0;
   text-transform: uppercase;
@@ -796,10 +804,10 @@ header .address i:before {
 }
 
 .phone {
-  color: #4C89BE;
+  color: #26A2BE;
   font-size: 35px;
   line-height: 1.1;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-weight: 700;
 }
 .phone span {
@@ -820,7 +828,7 @@ header .address i:before {
   color: #000000;
 }
 .address:hover {
-  color: #4C89BE;
+  color: #26A2BE;
 }
 
 .split {
@@ -828,12 +836,12 @@ header .address i:before {
   justify-content: space-around;
   align-items: center;
   max-width: 1260px;
-  margin: 50px auto;
+  margin: 80px auto;
 }
 .split article {
   margin: 10px;
   padding: 10px;
-  flex: 0 1 530px;
+  flex: 0 1 550px;
   text-align: left;
 }
 .split article p, .split article h2 {
@@ -901,6 +909,9 @@ figcaption {
 #banner > * {
   flex: 1 0 500px;
 }
+#banner .flex-ed {
+  background-color: #ECF4F5;
+}
 #banner figure {
   margin: 0;
   position: relative;
@@ -923,10 +934,11 @@ figcaption {
   display: block;
   font-size: 104px;
   line-height: 1;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
 }
 #banner article {
   order: 2;
+  flex: 1;
   position: relative;
   z-index: 2;
   padding: 10px;
@@ -940,6 +952,7 @@ figcaption {
 #banner article p {
   font-size: 25px;
   line-height: 30px;
+  margin-top: 0;
 }
 #banner article * {
   color: #000;
@@ -976,7 +989,7 @@ figcaption {
   margin: 50px auto;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #4C89BE;
+  border: 2px solid #26A2BE;
 }
 #patients .flex-ed article {
   position: relative;
@@ -1014,7 +1027,7 @@ figcaption {
   top: -9px;
   left: -9px;
   content: "";
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -1024,13 +1037,20 @@ figcaption {
 }
 
 #services-custom {
-  background-color: #96A7BB;
-  padding: 4em 2em;
+  background-color: #fff;
+  padding: 3em 2em;
+}
+#services-custom #actual {
+  max-width: 1260px;
+  margin: auto;
+  padding: 70px 10px;
+  border-left: 4px solid #26A2BE;
+  border-right: 4px solid #26A2BE;
+  border-bottom: 4px solid #26A2BE;
 }
 
 .services {
-  background-color: #fff;
-  border: 6px solid #1D2122;
+  background-color: #157184;
   text-align: center;
   max-width: 1260px;
   margin: 0 auto;
@@ -1039,7 +1059,7 @@ figcaption {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 20px 40px;
 }
 .services > div:first-of-type article {
   max-width: 550px;
@@ -1075,7 +1095,7 @@ figcaption {
   font-weight: 300;
   line-height: 1;
   color: #000000;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
   text-shadow: none;
   margin: 0 0 20px;
   text-align: center;
@@ -1086,7 +1106,7 @@ figcaption {
   letter-spacing: 2px;
   font-size: 22px;
   color: #1a1818;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   display: block;
   font-style: normal;
 }
@@ -1096,16 +1116,16 @@ figcaption {
   line-height: 46px;
 }
 .services h2 b {
-  color: #82A8D1;
-  font-family: "Playfair Display SC", serif;
+  color: #003041;
+  font-family: "Raleway", sans-serif;
   font-size: 45px;
 }
 .services .upper-form {
   display: flex;
-  background: #fff;
+  background: #157184;
 }
 .services .upper-form .btn {
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   color: #fff;
 }
 .services .upper-form .btn:hover {
@@ -1116,11 +1136,11 @@ figcaption {
   font-size: 45px;
   line-height: 50px;
   text-align: left;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
   flex: 0 1 85%;
-  color: #000;
+  color: #fff;
   margin: 20px auto;
-  text-align: left;
+  text-align: center;
 }
 .services .upper-form h2 small {
   display: block;
@@ -1165,14 +1185,14 @@ figcaption {
   height: 48px;
 }
 .services .upper-form .simple input:focus, .services .upper-form .simple select:focus {
-  background: #4C89BE;
+  background: #26A2BE;
 }
 .services .upper-form .simple textarea {
   height: 101px;
   margin-top: 0;
 }
 .services .upper-form .simple textarea:focus {
-  background: #4C89BE;
+  background: #26A2BE;
 }
 .services .upper-form ::-moz-placeholder {
   color: #fff;
@@ -1181,22 +1201,27 @@ figcaption {
   color: #000;
 }
 .services #cosmetic-list {
-  background-color: #1D2122;
-  padding: 50px 10px;
+  background-color: #003041;
+  padding: 30px 10px;
 }
 .services #cosmetic-list h3 {
   margin: 0;
   color: #fff;
   font-size: 26px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-weight: 700;
+  line-height: 1.5;
 }
 .services #cosmetic-list h3 span {
   font-size: 20px;
   margin: 0 10px;
+  color: #157184;
+}
+.services #cosmetic-list h3 #hide {
+  display: none;
 }
 .services #lp-slider h2 {
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
   font-size: 45px;
   font-weight: 300;
   line-height: 1;
@@ -1208,7 +1233,7 @@ figcaption {
 .services #lp-slider h2 span {
   font-size: 22px;
   color: #1a1818;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   display: block;
 }
 .services .flex-ed {
@@ -1239,8 +1264,8 @@ figcaption {
   color: #000;
 }
 .services .flex-ed h2 b {
-  color: #82A8D1;
-  font-family: "Playfair Display SC", serif;
+  color: #003041;
+  font-family: "Raleway", sans-serif;
   font-size: 45px;
 }
 .services .flex-ed:first-of-type {
@@ -1280,7 +1305,7 @@ figcaption {
 .services ul li {
   font-size: 20px;
   line-height: 30px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   font-weight: 400;
   text-align: left;
   padding-left: 40px;
@@ -1301,8 +1326,18 @@ figcaption {
 }
 .services p {
   font-size: 12px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   margin-top: 5px;
+}
+
+#actual .patient {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  flex-wrap: wrap;
+}
+#actual .patient img {
+  margin: 15px;
 }
 
 #lp-slider h2 {
@@ -1327,7 +1362,7 @@ figcaption {
   box-shadow: 0 3px 7px rgba(2, 3, 3, 0.35);
 }
 #lp-slider .ba-slider-wrapper .ba-slider span {
-  background: #4C89BE;
+  background: #26A2BE;
   display: block;
   height: 100%;
   position: absolute;
@@ -1396,7 +1431,7 @@ figcaption {
   }
 }
 #reviews {
-  background-color: #1D2122;
+  background-color: #003041;
   padding: 20px 10px;
 }
 #reviews p, #reviews span {
@@ -1433,7 +1468,7 @@ figcaption {
   margin: 30px 40px;
   font-size: 45px;
   line-height: 1;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
 }
 #reviews .flex-ed > div:first-of-type {
   padding-left: 55px;
@@ -1463,7 +1498,7 @@ figcaption {
   position: absolute;
   transform: rotateZ(180deg);
   font-size: 75px;
-  left: -50px;
+  left: -80px;
   top: 8px;
   color: rgba(186, 186, 186, 0.15);
 }
@@ -1480,8 +1515,8 @@ figcaption {
   clear: right;
 }
 #reviews .flex-ed > div p:last-of-type .btn {
-  background-color: #4C89BE;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: #26A2BE;
+  font-family: "Maven Pro", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.1em;
@@ -1490,12 +1525,15 @@ figcaption {
   background-color: #fff;
   color: #000000;
 }
+#reviews .flex-ed > div:last-of-type {
+  flex: 0 1 500px;
+}
 #reviews .flex-ed > div:last-of-type h2 {
   text-align: center;
   font-size: 45px;
 }
 #reviews .flex-ed > div:last-of-type h2:first-of-type {
-  color: #82A8D1;
+  color: #fff;
   font-size: 65px;
 }
 
@@ -1512,7 +1550,7 @@ figcaption {
   border-color: #fff;
 }
 #options:hover:after {
-  border-color: #82A8D1;
+  border-color: #003041;
 }
 
 #secondary {
@@ -1541,9 +1579,13 @@ figcaption {
 }
 #secondary .icon-map-marker {
   font-size: 30px;
-  color: #82A8D1;
+  color: #003041;
 }
 
+#team {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 #team figure {
   max-width: 525px;
 }
@@ -1557,7 +1599,6 @@ figcaption {
   color: #000000;
   padding: 5px 10px;
   width: 100%;
-  line-height: 1.3;
   max-width: 575px;
   letter-spacing: 0.95px;
   font-size: 18px;
@@ -1568,7 +1609,7 @@ figcaption {
   font-weight: 700;
 }
 #team a:hover {
-  color: #4C89BE;
+  color: #26A2BE;
 }
 #team span {
   margin: 0 10px;
@@ -1582,7 +1623,7 @@ figcaption {
 /* ---------------- Contact --------------- */
 footer {
   padding-top: 70px;
-  background-color: #F2F6FB;
+  background-color: #E7F0F2;
 }
 footer .flex-ed {
   justify-content: center;
@@ -1591,6 +1632,9 @@ footer .flex-ed {
 }
 footer .flex-ed > * {
   background-color: #fff;
+}
+footer #footer-logo {
+  display: none;
 }
 footer article {
   min-height: 430px;
@@ -1612,23 +1656,23 @@ footer #services {
   padding: 10px;
 }
 footer #services .btn {
-  padding: 20px 10px;
-  margin: 5px 0;
+  padding: 13px 10px;
+  margin: 4px 0;
 }
 footer .phone {
   font-size: 40px;
-  color: #4C89BE;
+  color: #26A2BE;
   margin: 10px auto;
   font-weight: 700;
   display: block;
   letter-spacing: 0.28px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
 }
 footer .phone span {
   color: #fff;
 }
 footer .phone:hover {
-  color: #82A8D1;
+  color: #003041;
 }
 footer .address {
   color: #231F20;
@@ -1637,7 +1681,7 @@ footer .address {
   margin-top: 20px;
 }
 footer .address:hover {
-  color: #82A8D1;
+  color: #003041;
 }
 footer h3 {
   margin-top: 20px;
@@ -1645,7 +1689,7 @@ footer h3 {
   color: #324248;
   font-weight: 500;
   font-size: 30px;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
 }
 footer #footer-form h3 {
   margin-bottom: 0;
@@ -1695,14 +1739,14 @@ footer .simple {
   margin: 10px auto;
   list-style: none;
   text-align: center;
-  border: 1px solid #4C89BE;
-  background-color: #4C89BE;
+  border: 1px solid #26A2BE;
+  background-color: #26A2BE;
 }
 #services li a {
   display: block;
   color: #fff;
   font-weight: 500;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -1712,7 +1756,7 @@ footer .simple {
   color: #fff;
 }
 #services li:hover {
-  background-color: #82A8D1;
+  background-color: #003041;
 }
 #services li:hover a {
   color: white !important;
@@ -1731,11 +1775,11 @@ footer .simple {
   font-weight: 700;
   padding: 15px 10px;
   min-width: auto;
-  background-color: #4C89BE;
+  background-color: #26A2BE;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
 }
 .simple .btn:hover {
-  background-color: #82A8D1;
+  background-color: #003041;
 }
 .simple input {
   height: 45px;
@@ -1756,7 +1800,7 @@ footer .simple {
 }
 .simple input:focus, .simple textarea:focus, .simple .btn:focus {
   background-color: #f7f4f4;
-  box-shadow: inset 0 3px 0 #82A8D1;
+  box-shadow: inset 0 3px 0 #003041;
 }
 
 ::-moz-placeholder {
@@ -1768,7 +1812,7 @@ footer .simple {
 }
 
 .copy {
-  font: 400 20px/1.4 "Source Sans Pro", sans-serif;
+  font: 400 18px/1.4 "Maven Pro", sans-serif;
   color: #000;
   text-transform: uppercase;
   margin-top: 20px;
@@ -1781,10 +1825,10 @@ footer .simple {
 }
 .copy a {
   margin: auto;
-  color: #4C89BE;
+  color: #157184;
 }
 .copy a:hover {
-  color: #82A8D1;
+  color: #003041;
 }
 
 #landing-page-form {
@@ -1875,6 +1919,9 @@ hr {
   .phone {
     font-size: 32px;
   }
+  #actual .patient img {
+    margin: 10px 0;
+  }
 }
 @media (min-width: 1000px) {
   #mobile-btns {
@@ -1896,7 +1943,7 @@ hr {
     padding: 0;
   }
   #nav .phone {
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 300;
     background-color: #96A7BB;
     color: #fff;
@@ -1905,12 +1952,19 @@ hr {
     color: #fff;
     font-weight: 700;
   }
-  #nav > .btn, #nav #header-details {
+  #nav > div, #nav #header-details {
     display: none;
+  }
+  #nav #mobile-btns {
+    display: flex !important;
+    flex: 100%;
   }
   hr {
     display: block;
     max-width: 95%;
+  }
+  .services > div:first-of-type {
+    padding: 0;
   }
   .phone {
     font-size: 24px;
@@ -1946,6 +2000,7 @@ hr {
   }
   #banner figure {
     display: block;
+    width: 100%;
   }
   #banner figure img {
     width: 100%;
@@ -2012,7 +2067,7 @@ hr {
   }
   .services .upper-form > div {
     flex-wrap: wrap;
-    padding: 0 30px;
+    padding: 0 20px 30px 20px;
   }
   .services .upper-form h2 {
     text-align: center;
@@ -2054,7 +2109,7 @@ hr {
   margin: 7px auto;
   list-style: none;
   text-align: center;
-  background-color: #4C89BE;
+  background-color: #26A2BE;
 }
 
 #services li a {
@@ -2062,13 +2117,13 @@ hr {
   color: #fff;
   font-weight: 500;
   font-size: 19px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Maven Pro", sans-serif;
   letter-spacing: 1px;
   padding: 18px 20px 15px;
 }
 
 #services li:hover {
-  background-color: #82A8D1;
+  background-color: #003041;
 }
 
 #services li:hover a {
@@ -2103,6 +2158,9 @@ hr {
   }
   .services #cosmetic-list h3 > * {
     width: 100%;
+  }
+  .services #cosmetic-list h3 #hide {
+    display: block !important;
   }
 }
 @media (max-width: 740px) {
@@ -2159,7 +2217,7 @@ hr {
   header .phone {
     font-size: 18px;
     color: #fff;
-    background-color: #82A8D1;
+    background-color: #003041;
     border: 0;
     display: flex;
     flex-flow: column;
@@ -2214,7 +2272,18 @@ hr {
     max-width: 550px;
   }
   footer #map {
+    padding: 0 20px 35px;
+    width: 93%;
+    margin: 20px auto 30px;
+  }
+  footer #map iframe {
     display: none;
+  }
+  footer .phone {
+    font-size: 34px;
+  }
+  footer #footer-logo {
+    display: block !important;
   }
   footer .split {
     display: block;
@@ -2225,7 +2294,8 @@ hr {
 }
 @media (max-width: 590px) {
   .services .upper-form h2 {
-    font-size: revert;
+    font-size: 36px;
+    line-height: 45px;
   }
   header .address {
     display: none;
@@ -2305,6 +2375,15 @@ hr {
   .copy {
     padding: 30px 10px 20px;
   }
+  #reviews .flex-ed > div h2:first-of-type, #reviews .flex-ed > div .comment {
+    text-align: center;
+  }
+  #reviews .flex-ed > div .comment {
+    margin-bottom: 10px;
+  }
+  #reviews .flex-ed > div .author {
+    float: none;
+  }
 }
 @media (max-width: 430px) {
   header .phone {
@@ -2333,6 +2412,9 @@ hr {
     display: block;
     font-size: 0;
   }
+  #actual .patient img {
+    min-width: 505px;
+  }
   .split article .btn {
     margin-bottom: 20px;
     min-width: auto;
@@ -2351,7 +2433,7 @@ hr {
     width: 300px;
   }
   #fixed-tabs a {
-    font-size: 11px;
+    font-size: 13px;
   }
   .services .flex-ed img {
     max-width: 200px;
