@@ -497,7 +497,7 @@ star:after {
 }
 
 #fixed-tabs a:nth-of-type(odd) {
-  background-color: #26A2BE;
+  background-color: #1775C7;
   color: #fff;
 }
 
@@ -536,12 +536,12 @@ body {
   background: #fff;
   text-align: center;
   color: #231f20;
-  font: 400 18px/26px "Maven Pro", sans-serif;
+  font: 400 18px/26px "Jost", sans-serif;
 }
 
 p {
   color: #000000;
-  font: 400 20px/1.6 "Maven Pro", sans-serif;
+  font: 400 21px/30px "Jost", sans-serif;
   letter-spacing: 0.36px;
 }
 
@@ -549,22 +549,22 @@ a {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: #003041;
+  color: #1D252C;
 }
 
 a:hover {
-  color: #003041;
+  color: #1D252C;
 }
 
 h1, h2 h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
   text-align: center;
 }
 
 h1 {
   margin: 0;
   color: #102430;
-  font: 400 45px/1.3 "Raleway", sans-serif;
+  font: 400 45px/1.3 "DM Serif Display", serif;
   letter-spacing: 1.1px;
 }
 
@@ -574,13 +574,13 @@ h1 small {
 }
 
 h2, .h2-like {
-  font: 300 50px/1.1 "Raleway", sans-serif, sans-serif;
+  font: 300 50px/1.1 "DM Serif Display", serif, sans-serif;
   color: #000000;
   margin: 10px 0;
 }
 
 h3, .h3 {
-  font: 400 30px/30px "Raleway", sans-serif;
+  font: 400 30px/30px "DM Serif Display", serif;
   color: #000000;
   margin: 15px auto 10px;
   letter-spacing: 0.75px;
@@ -607,7 +607,7 @@ main ul li:before {
   position: absolute;
   left: 0;
   top: 0;
-  color: #003041;
+  color: #1D252C;
 }
 
 .btn, .btn-alt {
@@ -617,9 +617,9 @@ main ul li:before {
   padding: 15px 20px;
   text-align: center;
   color: #fff;
-  background-color: #26A2BE;
+  background-color: #1775C7;
   text-transform: uppercase;
-  font: 700 18px/1.1 "Maven Pro", sans-serif, sans-serif;
+  font: 700 18px/1.1 "Jost", sans-serif, sans-serif;
   letter-spacing: 1.8px;
 }
 
@@ -632,7 +632,7 @@ main ul li:before {
 }
 
 .btn:hover, .btn-alt:hover {
-  background-color: #003041;
+  background-color: #1D252C;
   color: #fff;
 }
 
@@ -642,7 +642,7 @@ main ul li:before {
 }
 
 .btn-alt:hover {
-  background-color: #26A2BE;
+  background-color: #1775C7;
   color: white;
 }
 
@@ -659,10 +659,10 @@ header .locations > span {
   border-radius: 25px;
   padding: 3px 20px;
   text-align: center;
-  font: 500 20px/1.1 "Maven Pro", sans-serif;
+  font: 500 20px/1.1 "Jost", sans-serif;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  background-color: #26A2BE;
+  background-color: #1775C7;
   color: #fff;
   display: table;
   margin: auto auto 10px;
@@ -680,16 +680,19 @@ header .address {
   line-height: 1.25;
   font-weight: 400;
   letter-spacing: 0.55px;
-  margin-bottom: 10px;
 }
 header .address:hover {
-  color: #003041;
+  color: #1775C7;
 }
 header .address i:before {
-  color: #26A2BE;
+  color: #1775C7;
   font-size: 22px;
   margin-left: -10px;
   margin-right: 15px;
+}
+header #nav > div:last-of-type {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .fix-nav header {
@@ -714,7 +717,8 @@ header .address i:before {
 .pho {
   display: flex;
   color: #000;
-  font: 700 37px/30px "Maven Pro", sans-serif;
+  font: 700 37px/30px "Jost", sans-serif;
+  margin-bottom: 10px;
 }
 .pho span {
   display: block;
@@ -722,17 +726,17 @@ header .address i:before {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 .pho:hover {
-  color: #000000;
+  color: #1775C7;
 }
 .pho i {
   display: flex;
   align-items: center;
 }
 .pho i:before {
-  color: #26A2BE;
+  color: #1775C7;
   font-size: 22px;
   margin-left: 0px;
   margin-right: 15px;
@@ -749,10 +753,12 @@ header .address i:before {
 #nav .btn {
   justify-content: center;
   margin: 0;
-  font-size: 21px;
+  font-size: 20px;
+  padding: 15px 10px 13px;
   min-width: 200px;
-  max-width: 400px;
-  text-transform: none;
+  letter-spacing: normal;
+  width: 400px;
+  text-transform: uppercase;
   display: flex;
   color: #fff;
   font-weight: 600;
@@ -760,15 +766,22 @@ header .address i:before {
 }
 #nav .btn span {
   display: block;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 500;
   letter-spacing: 1.5px;
 }
 #nav .btn i:before {
   margin-right: 10px;
 }
-#nav #header-details, #nav .logo, #nav > div {
+#nav #header-details, #nav > div {
+  flex: 2;
+}
+#nav .logo {
   flex: 1;
+}
+#nav #btn-div {
+  display: flex;
+  justify-content: flex-end;
 }
 #nav #mobile-btns {
   width: 100%;
@@ -784,14 +797,19 @@ header .address i:before {
 #nav #mobile-btns .btn {
   display: flex;
   flex-wrap: wrap;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1;
+  min-width: auto;
   justify-content: center;
   border-radius: 0;
   text-transform: uppercase;
 }
 #nav #mobile-btns .btn span {
   width: 100%;
+}
+#nav #mobile-btns .phone {
+  font-size: 18px;
+  font-weight: 700;
 }
 #nav #mobile-btns .phone, #nav #mobile-btns .btn {
   display: flex;
@@ -804,10 +822,10 @@ header .address i:before {
 }
 
 .phone {
-  color: #26A2BE;
+  color: #1775C7;
   font-size: 35px;
   line-height: 1.1;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 700;
 }
 .phone span {
@@ -828,7 +846,7 @@ header .address i:before {
   color: #000000;
 }
 .address:hover {
-  color: #26A2BE;
+  color: #1775C7;
 }
 
 .split {
@@ -910,7 +928,7 @@ figcaption {
   flex: 1 0 500px;
 }
 #banner .flex-ed {
-  background-color: #ECF4F5;
+  background-color: #F5F5F6;
 }
 #banner figure {
   margin: 0;
@@ -923,8 +941,13 @@ figcaption {
   position: relative;
   width: 100%;
 }
+#banner figure figcaption {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 0;
+}
 #banner h1 {
-  font-size: 60px;
+  font-size: 50px;
   color: #fff;
   letter-spacing: normal;
   line-height: 60px;
@@ -934,7 +957,7 @@ figcaption {
   display: block;
   font-size: 104px;
   line-height: 1;
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
 }
 #banner article {
   order: 2;
@@ -989,7 +1012,7 @@ figcaption {
   margin: 50px auto;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #26A2BE;
+  border: 2px solid #1775C7;
 }
 #patients .flex-ed article {
   position: relative;
@@ -1027,7 +1050,7 @@ figcaption {
   top: -9px;
   left: -9px;
   content: "";
-  background-color: #26A2BE;
+  background-color: #1775C7;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -1044,13 +1067,16 @@ figcaption {
   max-width: 1260px;
   margin: auto;
   padding: 70px 10px;
-  border-left: 4px solid #26A2BE;
-  border-right: 4px solid #26A2BE;
-  border-bottom: 4px solid #26A2BE;
+  border-left: 4px solid #1775C7;
+  border-right: 4px solid #1775C7;
+  border-bottom: 4px solid #1775C7;
+}
+#services-custom #actual h2 {
+  margin-bottom: 30px;
 }
 
 .services {
-  background-color: #157184;
+  background-color: #7B868C;
   text-align: center;
   max-width: 1260px;
   margin: 0 auto;
@@ -1095,7 +1121,7 @@ figcaption {
   font-weight: 300;
   line-height: 1;
   color: #000000;
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
   text-shadow: none;
   margin: 0 0 20px;
   text-align: center;
@@ -1106,7 +1132,7 @@ figcaption {
   letter-spacing: 2px;
   font-size: 22px;
   color: #1a1818;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   display: block;
   font-style: normal;
 }
@@ -1116,16 +1142,15 @@ figcaption {
   line-height: 46px;
 }
 .services h2 b {
-  color: #003041;
-  font-family: "Raleway", sans-serif;
+  color: #1D252C;
+  font-family: "DM Serif Display", serif;
   font-size: 45px;
 }
 .services .upper-form {
   display: flex;
-  background: #157184;
 }
 .services .upper-form .btn {
-  background-color: #26A2BE;
+  background-color: #1775C7;
   color: #fff;
 }
 .services .upper-form .btn:hover {
@@ -1133,10 +1158,10 @@ figcaption {
   color: #000000;
 }
 .services .upper-form h2 {
-  font-size: 45px;
-  line-height: 50px;
+  font-size: 55px;
+  line-height: 60px;
   text-align: left;
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
   flex: 0 1 85%;
   color: #fff;
   margin: 20px auto;
@@ -1185,14 +1210,14 @@ figcaption {
   height: 48px;
 }
 .services .upper-form .simple input:focus, .services .upper-form .simple select:focus {
-  background: #26A2BE;
+  background: #1775C7;
 }
 .services .upper-form .simple textarea {
   height: 101px;
   margin-top: 0;
 }
 .services .upper-form .simple textarea:focus {
-  background: #26A2BE;
+  background: #1775C7;
 }
 .services .upper-form ::-moz-placeholder {
   color: #fff;
@@ -1201,27 +1226,27 @@ figcaption {
   color: #000;
 }
 .services #cosmetic-list {
-  background-color: #003041;
+  background-color: #1D252C;
   padding: 30px 10px;
 }
 .services #cosmetic-list h3 {
   margin: 0;
   color: #fff;
-  font-size: 26px;
-  font-family: "Maven Pro", sans-serif;
+  font-size: 24px;
+  font-family: "Jost", sans-serif;
   font-weight: 700;
   line-height: 1.5;
 }
 .services #cosmetic-list h3 span {
   font-size: 20px;
   margin: 0 10px;
-  color: #157184;
+  color: #7B868C;
 }
 .services #cosmetic-list h3 #hide {
   display: none;
 }
 .services #lp-slider h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
   font-size: 45px;
   font-weight: 300;
   line-height: 1;
@@ -1233,7 +1258,7 @@ figcaption {
 .services #lp-slider h2 span {
   font-size: 22px;
   color: #1a1818;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   display: block;
 }
 .services .flex-ed {
@@ -1264,8 +1289,8 @@ figcaption {
   color: #000;
 }
 .services .flex-ed h2 b {
-  color: #003041;
-  font-family: "Raleway", sans-serif;
+  color: #1D252C;
+  font-family: "DM Serif Display", serif;
   font-size: 45px;
 }
 .services .flex-ed:first-of-type {
@@ -1305,7 +1330,7 @@ figcaption {
 .services ul li {
   font-size: 20px;
   line-height: 30px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 400;
   text-align: left;
   padding-left: 40px;
@@ -1326,7 +1351,7 @@ figcaption {
 }
 .services p {
   font-size: 12px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   margin-top: 5px;
 }
 
@@ -1362,7 +1387,7 @@ figcaption {
   box-shadow: 0 3px 7px rgba(2, 3, 3, 0.35);
 }
 #lp-slider .ba-slider-wrapper .ba-slider span {
-  background: #26A2BE;
+  background: #1775C7;
   display: block;
   height: 100%;
   position: absolute;
@@ -1431,14 +1456,19 @@ figcaption {
   }
 }
 #reviews {
-  background-color: #003041;
-  padding: 20px 10px;
+  background-color: #1D252C;
+  padding: 30px 10px;
 }
 #reviews p, #reviews span {
   color: #fff;
 }
 #reviews h2 {
   color: #FFF;
+}
+#reviews #review-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 #reviews star {
   display: inline;
@@ -1463,12 +1493,12 @@ figcaption {
   flex-wrap: wrap;
 }
 #reviews .flex-ed > div {
-  flex: 0 1 600px;
+  flex: 0 1 55%;
   position: relative;
-  margin: 30px 40px;
   font-size: 45px;
   line-height: 1;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
+  margin: 30px;
 }
 #reviews .flex-ed > div:first-of-type {
   padding-left: 55px;
@@ -1487,7 +1517,7 @@ figcaption {
 #reviews .flex-ed > div .comment {
   position: relative;
   text-align: left;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 34px;
   margin-bottom: 0;
@@ -1497,10 +1527,10 @@ figcaption {
   content: "\e838";
   position: absolute;
   transform: rotateZ(180deg);
-  font-size: 75px;
-  left: -80px;
-  top: 8px;
-  color: rgba(186, 186, 186, 0.15);
+  font-size: 180px;
+  left: -62px;
+  top: -29px;
+  color: rgba(186, 186, 186, 0.25);
 }
 #reviews .flex-ed > div .author {
   float: right;
@@ -1515,8 +1545,8 @@ figcaption {
   clear: right;
 }
 #reviews .flex-ed > div p:last-of-type .btn {
-  background-color: #26A2BE;
-  font-family: "Maven Pro", sans-serif;
+  background-color: #1775C7;
+  font-family: "Jost", sans-serif;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.1em;
@@ -1526,7 +1556,7 @@ figcaption {
   color: #000000;
 }
 #reviews .flex-ed > div:last-of-type {
-  flex: 0 1 500px;
+  flex: 0 1 35%;
 }
 #reviews .flex-ed > div:last-of-type h2 {
   text-align: center;
@@ -1534,7 +1564,7 @@ figcaption {
 }
 #reviews .flex-ed > div:last-of-type h2:first-of-type {
   color: #fff;
-  font-size: 65px;
+  font-size: 70px;
 }
 
 #options div {
@@ -1550,7 +1580,7 @@ figcaption {
   border-color: #fff;
 }
 #options:hover:after {
-  border-color: #003041;
+  border-color: #1D252C;
 }
 
 #secondary {
@@ -1579,7 +1609,7 @@ figcaption {
 }
 #secondary .icon-map-marker {
   font-size: 30px;
-  color: #003041;
+  color: #1D252C;
 }
 
 #team {
@@ -1608,9 +1638,6 @@ figcaption {
   color: #fff;
   font-weight: 700;
 }
-#team a:hover {
-  color: #26A2BE;
-}
 #team span {
   margin: 0 10px;
 }
@@ -1623,7 +1650,7 @@ figcaption {
 /* ---------------- Contact --------------- */
 footer {
   padding-top: 70px;
-  background-color: #E7F0F2;
+  background-color: #F1F3F3;
 }
 footer .flex-ed {
   justify-content: center;
@@ -1642,6 +1669,7 @@ footer article {
   text-align: center;
   margin: 10px;
   flex: 0 1 340px;
+  height: 470px;
   padding: 10px;
   box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.35);
   display: flex;
@@ -1661,18 +1689,18 @@ footer #services .btn {
 }
 footer .phone {
   font-size: 40px;
-  color: #26A2BE;
+  color: #1775C7;
   margin: 10px auto;
   font-weight: 700;
   display: block;
   letter-spacing: 0.28px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 footer .phone span {
   color: #fff;
 }
 footer .phone:hover {
-  color: #003041;
+  color: #1D252C;
 }
 footer .address {
   color: #231F20;
@@ -1681,18 +1709,18 @@ footer .address {
   margin-top: 20px;
 }
 footer .address:hover {
-  color: #003041;
+  color: #1775C7;
 }
 footer h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #324248;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 30px;
-  font-family: "Raleway", sans-serif;
+  font-family: "Jost", sans-serif;
 }
 footer #footer-form h3 {
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 footer .simple {
   margin: 0 0 5px;
@@ -1700,6 +1728,7 @@ footer .simple {
 
 #services h3 {
   font-size: 30px;
+  font-family: "Jost", sans-serif;
 }
 
 #contact {
@@ -1728,6 +1757,7 @@ footer .simple {
 #map h2 {
   margin: 30px auto;
   font-size: 35px;
+  font-family: "Jost", sans-serif;
 }
 
 #services ul {
@@ -1739,14 +1769,14 @@ footer .simple {
   margin: 10px auto;
   list-style: none;
   text-align: center;
-  border: 1px solid #26A2BE;
-  background-color: #26A2BE;
+  border: 1px solid #1775C7;
+  background-color: #1775C7;
 }
 #services li a {
   display: block;
   color: #fff;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
+  font-family: "DM Serif Display", serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -1756,7 +1786,7 @@ footer .simple {
   color: #fff;
 }
 #services li:hover {
-  background-color: #003041;
+  background-color: #1D252C;
 }
 #services li:hover a {
   color: white !important;
@@ -1775,11 +1805,11 @@ footer .simple {
   font-weight: 700;
   padding: 15px 10px;
   min-width: auto;
-  background-color: #26A2BE;
+  background-color: #1775C7;
   box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.25);
 }
 .simple .btn:hover {
-  background-color: #003041;
+  background-color: #1D252C;
 }
 .simple input {
   height: 45px;
@@ -1800,7 +1830,7 @@ footer .simple {
 }
 .simple input:focus, .simple textarea:focus, .simple .btn:focus {
   background-color: #f7f4f4;
-  box-shadow: inset 0 3px 0 #003041;
+  box-shadow: inset 0 3px 0 #1D252C;
 }
 
 ::-moz-placeholder {
@@ -1812,7 +1842,7 @@ footer .simple {
 }
 
 .copy {
-  font: 400 18px/1.4 "Maven Pro", sans-serif;
+  font: 400 18px/1.4 "Jost", sans-serif;
   color: #000;
   text-transform: uppercase;
   margin-top: 20px;
@@ -1820,15 +1850,15 @@ footer .simple {
   padding: 10px 0 60px;
   opacity: 0.4;
 }
-.copy span {
+.copy span:not(:first-of-type) {
   padding: 0 5px;
 }
 .copy a {
   margin: auto;
-  color: #157184;
+  color: #1775C7;
 }
 .copy a:hover {
-  color: #003041;
+  color: #1D252C;
 }
 
 #landing-page-form {
@@ -1952,7 +1982,7 @@ hr {
     color: #fff;
     font-weight: 700;
   }
-  #nav > div, #nav #header-details {
+  #nav #btn-div, #nav #header-details {
     display: none;
   }
   #nav #mobile-btns {
@@ -1976,6 +2006,9 @@ hr {
   #banner {
     background: none;
   }
+  #banner figure figcaption {
+    display: none;
+  }
   #banner:before {
     top: 0;
     bottom: 0;
@@ -1993,6 +2026,7 @@ hr {
   #banner article {
     margin: 0 auto;
     padding-top: 20px;
+    order: -1;
   }
   #banner article div {
     max-width: 500px;
@@ -2025,6 +2059,10 @@ hr {
   }
   #reviews .flex-ed > div {
     margin: 5px;
+    flex: 100%;
+  }
+  #reviews .flex-ed > div:last-of-type {
+    flex: 100%;
   }
   #reviews .flex-ed > div:first-of-type {
     padding: 0;
@@ -2035,6 +2073,12 @@ hr {
   }
   #reviews .flex-ed > div:last-of-type {
     font-size: 30px;
+  }
+  #reviews #review-flex {
+    justify-content: center;
+  }
+  #reviews #review-flex p:first-of-type {
+    order: 2;
   }
   .services .flex-ed article, .services .flex-ed .upper-form {
     flex: 0 1 100%;
@@ -2065,9 +2109,18 @@ hr {
   .split figure {
     margin: 20px auto;
   }
+  #services-custom #actual {
+    margin: 60px 20px 20px;
+    padding: 20px;
+    border-top: 4px solid #1775C7;
+  }
+  #services-custom #actual h2 {
+    font-size: 45px;
+  }
   .services .upper-form > div {
     flex-wrap: wrap;
-    padding: 0 20px 30px 20px;
+    padding: 30px 20px;
+    max-width: 100%;
   }
   .services .upper-form h2 {
     text-align: center;
@@ -2098,6 +2151,9 @@ hr {
   .frame iframe {
     height: 400px;
   }
+  #reviews .flex-ed > div:last-of-type h2:first-of-type {
+    font-size: 60px !important;
+  }
 }
 #services ul {
   margin-top: 20px;
@@ -2109,7 +2165,7 @@ hr {
   margin: 7px auto;
   list-style: none;
   text-align: center;
-  background-color: #26A2BE;
+  background-color: #1775C7;
 }
 
 #services li a {
@@ -2117,13 +2173,13 @@ hr {
   color: #fff;
   font-weight: 500;
   font-size: 19px;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Jost", sans-serif;
   letter-spacing: 1px;
   padding: 18px 20px 15px;
 }
 
 #services li:hover {
-  background-color: #003041;
+  background-color: #1D252C;
 }
 
 #services li:hover a {
@@ -2217,7 +2273,7 @@ hr {
   header .phone {
     font-size: 18px;
     color: #fff;
-    background-color: #003041;
+    background-color: #1D252C;
     border: 0;
     display: flex;
     flex-flow: column;
@@ -2293,6 +2349,24 @@ hr {
   }
 }
 @media (max-width: 590px) {
+  .split article h2, #reviews .flex-ed div:first-of-type h2 {
+    max-width: 445px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .split article h2:after, #reviews .flex-ed div:first-of-type h2:after {
+    content: "";
+    background: #000;
+    width: 125px;
+    height: 1px;
+    margin: 25px auto 0;
+  }
+  #reviews .flex-ed div:first-of-type h2:after {
+    background: #fff;
+  }
   .services .upper-form h2 {
     font-size: 36px;
     line-height: 45px;
@@ -2412,9 +2486,6 @@ hr {
     display: block;
     font-size: 0;
   }
-  #actual .patient img {
-    min-width: 505px;
-  }
   .split article .btn {
     margin-bottom: 20px;
     min-width: auto;
@@ -2439,7 +2510,11 @@ hr {
     max-width: 200px;
   }
   #banner article h1 {
-    font-size: 50px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #banner article h1 br {
+    display: none;
   }
   #patients .flex-ed article:before {
     display: none;
@@ -2468,7 +2543,6 @@ hr {
 }
 @media (max-width: 370px) {
   #fixed-tabs a i {
-    display: table;
     margin: 0 auto 5px;
   }
-}/*# sourceMappingURL=lp-cosmetic-styles.css.map */
+}/*# sourceMappingURL=lp-smile-makeover-styles.css.map */

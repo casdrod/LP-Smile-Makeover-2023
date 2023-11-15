@@ -5,11 +5,11 @@
 @font-face { font-family: "Saol Display"; src: url(SaolDisplay-Regular.ttf) format("truetype"); }
 @font-face { font-family: "Saol Display Italic"; src: url(SaolDisplay-Semibolditalic.ttf) format("truetype"); }
 
-$primary: #26A2BE;
-$secondary:#003041;
-$tertiary: #157184;
-$font: 'Maven Pro', sans-serif;
-$font2: 'Raleway', sans-serif;
+$primary: #1775C7;
+$secondary:#1D252C;
+$tertiary: #7B868C;
+$font: 'Jost', sans-serif;
+$font2: 'DM Serif Display', serif;
 $text: #000000;
 
 #fixed-tabs{position:fixed;bottom:0;right:0;width:100%;text-align:center;line-height:1;display:flex;z-index:9999}
@@ -30,7 +30,7 @@ footer{margin-bottom:42px!important}
 }
 
 body{overflow-x:hidden;position:relative;background:#fff;text-align:center;color:#231f20;font:400 18px/26px $font}
-p{color: $text;font:400 20px/1.6 $font; letter-spacing: 0.36px;}
+p{color: $text;font:400 21px/30px $font; letter-spacing: 0.36px;}
 a{display:inline-block;text-decoration:none;cursor:pointer;color:$secondary}
 a:hover{color:$secondary}
 h1,h2 h3,h4,h5,h6{font-family:$font2;text-align:center}
@@ -57,9 +57,12 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         .flex-ed{justify-content:space-around}
     }
     address{padding:0 8px;}
-    .address{display:flex;color: #000;font-size: 19px;line-height:1.25;font-weight:400;letter-spacing:.55px;margin-bottom: 10px;
-        &:hover{color:$secondary}
+    .address{display:flex;color: #000;font-size: 19px;line-height:1.25;font-weight:400;letter-spacing:.55px;
+        &:hover{color:$primary}
         i:before {color: $primary;font-size: 22px;margin-left: -10px;margin-right: 15px;}
+    }
+    #nav {
+        > div:last-of-type {display: flex;justify-content: flex-end;}
     }
 }
 .fix-nav header{position:fixed;width:100%;left:0;top:0;right:0;animation-duration:.8s;animation-fill-mode:both;animation-name:slideIn;z-index:999;box-shadow:0 3px 7px rgba(0,0,0,0.35);
@@ -67,26 +70,29 @@ header{position:relative;padding:0;z-index:100;background-color: #fff;
         img{max-height:80px}
     }
 }
-.pho{display:flex;color:#000;font:700 37px/30px $font;
+.pho{display:flex;color:#000;font:700 37px/30px $font;margin-bottom: 10px;
     span{display:block;color:#FFF;font-size:14px;font-weight:500;text-transform:uppercase;font-family:$font}
-    &:hover{color:$text;}
+    &:hover{color:$primary;}
     i {display: flex;align-items: center;
         &:before {color: $primary;font-size: 22px;margin-left: 0px;margin-right: 15px;}
     }
 }
 #nav{display:flex;max-width:1400px;justify-content:space-between;margin:auto;align-items:center;padding:20px 10px;
-    .btn{justify-content:center;margin:0;font-size:21px;min-width:200px;max-width: 400px;text-transform:none;display:flex;color: #fff;font-weight: 600;border-radius: 20px;
+    .btn{justify-content:center;margin:0;font-size:20px;padding: 15px 10px 13px;min-width:200px;letter-spacing: normal;width: 400px;text-transform:uppercase;display:flex;color: #fff;font-weight: 600;border-radius: 20px;
         span{display:block;font-family:$font;font-weight:500;letter-spacing:1.5px}
         i:before {margin-right: 10px;}
     }
-    #header-details, .logo, > div {flex: 1;}
+    #header-details, > div {flex: 2;}
+    .logo {flex: 1;}
+    #btn-div {display:flex;justify-content: flex-end;}
     #mobile-btns {
         width: 100%; display: none;flex-wrap: wrap;align-items: center;flex: 100%;
         > * {flex: 1;height: 77px;}
         .btn {
-            display: flex;flex-wrap: wrap;font-size: 16px;letter-spacing: 1; justify-content: center; border-radius: 0;text-transform:uppercase;
+            display: flex;flex-wrap: wrap;font-size: 14px;letter-spacing: 1; min-width: auto;justify-content: center; border-radius: 0;text-transform:uppercase;
             span {width: 100%;}
         }
+        .phone {font-size: 18px;font-weight: 700;}
         .phone, .btn {
             display: flex; flex-wrap: wrap; justify-content: center;align-content: center;
             span {width: 100%;}
@@ -131,7 +137,7 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
   > * {
     flex: 1 0 500px;
   }
-  .flex-ed {background-color: #ECF4F5;}
+  .flex-ed {background-color: #F5F5F6;}
   figure {
     margin: 0;
     position: relative;
@@ -142,9 +148,10 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
       position: relative;
       width: 100%;
     }
+    figcaption {font-weight: 700;font-size: 18px;padding: 10px 0;}
   }
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     color: #fff;
     letter-spacing: normal;
     line-height: 60px;
@@ -209,10 +216,12 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
 }
 
 #services-custom{background-color: #fff; padding:3em 2em;
-    #actual {max-width: 1260px; margin: auto;padding: 70px 10px;border-left: 4px solid $primary;border-right: 4px solid $primary;border-bottom: 4px solid $primary;}
+    #actual {max-width: 1260px; margin: auto;padding: 70px 10px;border-left: 4px solid $primary;border-right: 4px solid $primary;border-bottom: 4px solid $primary;
+        h2 {margin-bottom: 30px;}
+    }
 }
 
-.services{background-color:#157184;text-align:center;max-width:1260px;margin:0 auto;
+.services{background-color:$tertiary;text-align:center;max-width:1260px;margin:0 auto;
     > div:first-of-type {
         display: flex;justify-content: space-around;flex-wrap: wrap;padding: 20px 40px;
         article {max-width: 550px;}
@@ -228,11 +237,11 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
         sup{font-size:26px;font-weight:500;line-height:46px}
         b{color:$secondary;font-family:$font2;font-size:45px}
     }
-    .upper-form{ display: flex; background: #157184;
+    .upper-form{ display: flex;
         .btn {background-color: $primary; color: #fff;
             &:hover {background-color: #fff; color: $text;}
         }
-        h2{font-size: 45px; line-height: 50px; text-align: left; font-family: $font2;flex: 0 1 85%;color: #fff; margin: 20px auto; text-align: center;
+        h2{font-size: 55px; line-height: 60px; text-align: left; font-family: $font2;flex: 0 1 85%;color: #fff; margin: 20px auto; text-align: center;
             small {display: block; font-size: 11px; text-transform: uppercase; padding: 10px 0;}
         }
         form{display:flex;justify-content:center;max-width:800px; margin:0 auto; align-items: center; padding: 0 35px;
@@ -255,7 +264,7 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
         ::placeholder{color:#000}
     }
     #cosmetic-list {background-color: $secondary;padding: 30px 10px;
-        h3 {margin: 0;color: #fff;font-size: 26px;font-family: $font;font-weight: 700;line-height: 1.5;
+        h3 {margin: 0;color: #fff;font-size: 24px;font-family: $font;font-weight: 700;line-height: 1.5;
             span {font-size: 20px;margin: 0 10px;color: $tertiary}
             #hide {display:none;}
         }
@@ -330,16 +339,17 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
     }
 }
 
-#reviews{ background-color: $secondary;  padding:20px 10px;
+#reviews{ background-color: $secondary;  padding:30px 10px;
     p, span {color:#fff}
     
     h2{color:#FFF}
+    #review-flex {display:flex;flex-wrap:wrap;justify-content: space-between;}
     star{display:inline;line-height:1;
         &:after{color:#febb21;font-size:17px;letter-spacing:6px}
     }
     .author{display:inline;font-size:18px; font-weight: bold; letter-spacing: 0.2em; text-transform: uppercase;}
     .flex-ed{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;
-        > div{flex:0 1 600px;position:relative;margin:30px 40px;font-size:45px;line-height:1;font-family:$font;
+        > div{flex:0 1 55%;position:relative;font-size:45px;line-height:1;font-family:$font;margin: 30px;
             &:first-of-type{padding-left:55px;}
             h2 {
                 font-size: 45px;font-weight: 400;text-align:left;
@@ -347,8 +357,10 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
                     span {font-size: 90px;}
                 }
             } 
-            .comment {position: relative;text-align:left;font-size: 28px;font-weight: 700;line-height: 34px;margin-bottom: 0;
-                &:before {font-family: 'fontello'; content: "\e838"; position: absolute;transform: rotateZ(180deg);font-size: 75px;left: -80px;top: 8px;color: rgba(186, 186, 186, 0.15);}
+            .comment {position: relative;text-align:left;font-size: 22px;font-weight: 700;line-height: 34px;margin-bottom: 0;
+                &:before {font-family: 'fontello'; content: "\e838"; position: absolute;transform: rotateZ(180deg);font-size: 180px;
+                    left: -62px;
+                    top: -29px;color: rgba(186, 186, 186, 0.25);}
             }
             .author{float: right;display:inline;font-size:18px; font-weight: bold; letter-spacing: 0.2em; text-transform: uppercase;}
             p:last-of-type {
@@ -358,9 +370,9 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
                 }
             }
         }
-        > div:last-of-type {flex: 0 1 500px;
+        > div:last-of-type {flex: 0 1 35%;
             h2 {text-align:center;font-size: 45px;
-                &:first-of-type {color: #fff;font-size: 65px;}
+                &:first-of-type {color: #fff;font-size: 70px;}
             }
         }
     }
@@ -391,7 +403,6 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
         .caption{background-color:rgba(255, 255, 255, 0.9);position:absolute;font-weight: 300;left:50%;transform:translateX(-50%);bottom:0;color:$text;padding:5px 10px;width:100%;max-width:575px;letter-spacing:.95px;font-size:18px; text-transform: uppercase;}    
     }
         a{color:#fff;font-weight: 700;
-        &:hover {color: $primary;}
     }
     span{margin:0 10px;}
 }
@@ -402,13 +413,13 @@ figcaption {position: absolute; bottom: 0; width: 100%; color: #000;letter-spaci
 
 /* ---------------- Contact --------------- */
 
-footer { padding-top: 70px; background-color: #E7F0F2; 
+footer { padding-top: 70px; background-color: #F1F3F3; 
     .flex-ed {justify-content: center; align-items: center;  padding-bottom: 30px;
         > * {background-color: #fff;}
     }
     #footer-logo {display:none;}
     article { 
-        min-height: 430px; border-radius: 15px; text-align: center; margin: 10px; flex: 0 1 340px;padding: 10px; box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.35);display: flex;flex-wrap: wrap;justify-content: center;align-items: center;
+        min-height: 430px; border-radius: 15px; text-align: center; margin: 10px; flex: 0 1 340px;height: 470px;padding: 10px; box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.35);display: flex;flex-wrap: wrap;justify-content: center;align-items: center;
         > * {flex: 100%;}
     }
     #services {padding: 10px;
@@ -419,19 +430,19 @@ footer { padding-top: 70px; background-color: #E7F0F2;
         &:hover {color: $secondary; }
     }
     .address { color: #231F20;font-size: 20px; line-height: 1.1; margin-top: 20px;
-        &:hover {color: $secondary; }
+        &:hover {color: $primary; }
     }
-    h3 {margin-top: 20px; margin-bottom: 20px; color: #324248; font-weight: 500; font-size: 30px; font-family: $font2;}
-    #footer-form h3 {margin-bottom: 0;}
+    h3 {margin-top: 20px; margin-bottom: 20px; color: #324248; font-weight: 400; font-size: 30px; font-family: $font;}
+    #footer-form h3 {margin-bottom: 20px;}
     .simple {margin: 0 0 5px;}
 }
 #services {
-    h3 {font-size: 30px;}}
+    h3 {font-size: 30px;font-family: $font;}}
 #contact {flex: 0 1 430px;padding: 30px 10px 20px;
     h3 {font-size: 36px; margin-top: 20px; margin-bottom: 25px;}}
 #map {display: table; border-radius: 10px; overflow: hidden;margin: 0 30px;flex: 0 1 580px;padding: 0 0 35px;box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.35);
     iframe {display: block;margin: auto;}
-    h2 {margin: 30px auto; font-size: 35px;}
+    h2 {margin: 30px auto; font-size: 35px;font-family: $font;}
 }
 
 #services {
@@ -465,8 +476,8 @@ footer { padding-top: 70px; background-color: #E7F0F2;
 ::placeholder { color: $text; }
 
 .copy {  font: 400 18px/1.4 $font; color: #000; text-transform:uppercase; margin-top: 20px; text-align: center; padding:10px 0 60px; opacity: 0.4;
-   span {padding: 0 5px;}
-   a { margin: auto; color:$tertiary;
+   span:not(:first-of-type) {padding: 0 5px;}
+   a { margin: auto; color:#1775C7;
        &:hover { color: $secondary}
     }
 }
@@ -513,17 +524,18 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #nav {padding:0;}
     #nav .phone {font-size: 22px;font-weight: 300;background-color: #96A7BB;color: #fff;}
     #nav .phone span {color: #fff;font-weight: 700;}
-    #nav > div, #nav #header-details {display: none;}
+    #nav #btn-div, #nav #header-details {display: none;}
     #nav #mobile-btns {display:flex!important;flex: 100%;}
     hr{display:block;max-width:95%}
     .services > div:first-of-type {padding: 0;}
     .phone{font-size:24px}
     .covid span{display:block;font-size:0}
     #banner{background:none}
+    #banner figure figcaption {display:none;}
     #banner:before{top:0;bottom:0}
     #banner article{width: 100%;margin: 0;min-width:450px;padding:40px 10px 10px;background-color:#fff}
     #banner .flex-ed{flex-wrap: wrap;}
-    #banner article{margin:0 auto;padding-top:20px}
+    #banner article{margin:0 auto;padding-top:20px;order: -1;}
     #banner article div{max-width:500px;margin:10px auto 15px}
     #banner figure{display:block;width: 100%;}
     #banner figure img{width:100%;display:block}
@@ -532,10 +544,14 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     .upper-form{flex-direction:column;padding:30px 10px}
     .upper-form h2{text-align:center;font-size:30px}
     #reviews h2{font-size:40px!important}
-    #reviews .flex-ed > div{margin:5px}
+    #reviews .flex-ed > div{margin:5px;flex: 100%;}
+    #reviews .flex-ed > div:last-of-type {flex: 100%;}
     #reviews .flex-ed > div:first-of-type{padding:0}
     #reviews .flex-ed > div:first-of-type:before{position:static;display:none}
     #reviews .flex-ed > div:last-of-type{font-size:30px}
+    #reviews #review-flex {justify-content: center;
+        p:first-of-type {order: 2;}
+    }
     .services .flex-ed article, .services .flex-ed .upper-form {flex: 0 1 100%;}
     .services ul {max-width: 270px;}
     .services ul li {flex: auto;}
@@ -544,7 +560,9 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     .split article h2,.split article p {text-align: center;}
     .split article .btn{float:none;margin:auto;display:table}
     .split figure{margin:20px auto}
-    .services .upper-form > div {flex-wrap:wrap;padding: 0 20px 30px 20px;}
+    #services-custom #actual {margin: 60px 20px 20px;padding: 20px;border-top: 4px solid #1775C7;}
+    #services-custom #actual h2 {font-size: 45px;}
+    .services .upper-form > div {flex-wrap:wrap;padding: 30px 20px;max-width: 100%;}
     .services .upper-form h2 {text-align:center;}
     #choice figure{margin-bottom:0}
     #secondary{padding:15px 0}
@@ -554,6 +572,7 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #contact {flex: 0 1 690px;}
     #services, #footer-form {flex: 1;}
     .frame iframe {height: 400px;}
+    #reviews .flex-ed > div:last-of-type h2:first-of-type {font-size: 60px!important;}
 }
 
 #services ul{margin-top:20px;padding-left:0;margin-bottom:10px}
@@ -613,6 +632,10 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
 }
 
 @media (max-width: 590px) {
+    .split article h2, #reviews .flex-ed div:first-of-type h2 {max-width: 445px; margin: auto;display: flex;flex-wrap:wrap;justify-content: center;margin-bottom: 0;
+        &:after {content:'';background: #000;width: 125px; height: 1px; margin: 25px auto 0;}
+    }
+    #reviews .flex-ed div:first-of-type h2:after {background: #fff;}
     .services .upper-form h2 {font-size: 36px;line-height: 45px;}
     header .address{display:none}
     #banner h1 small{font-size:28px}
@@ -651,7 +674,6 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #banner article div span strong{font-size:20px}
     #banner article > div span{letter-spacing:1.3px}
     #banner .caption span:nth-of-type(3){display:block;font-size:0}
-    #actual .patient img {min-width: 505px;}
     .split article .btn{margin-bottom:20px;min-width:auto}
     #team figure{display:table;margin: 0;}
     #services h3{margin-top:10px}
@@ -659,7 +681,8 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
     #slider {width: 300px;}
     #fixed-tabs a{font-size:13px}
     .services .flex-ed img {max-width:200px;}
-    #banner article h1 {font-size: 50px;}
+    #banner article h1 {font-size: 40px;line-height: 50px;}
+    #banner article h1 br {display: none;}
     #patients .flex-ed article:before {display: none}
     #patients .flex-ed article {padding-left: 0;}
     footer{
@@ -673,5 +696,5 @@ hr{width: 103px; height: 4px; background: #fff; opacity: 0.3;margin-top:30px;}
 }
 
 @media (max-width: 370px) {
-    #fixed-tabs a i{display:table;margin:0 auto 5px}
+    #fixed-tabs a i{margin:0 auto 5px}
 }
